@@ -1,0 +1,28 @@
+{
+  "name": "styling-practice",
+  "version": "0.0.0-development",
+  "author": "Nicolás Omar González Passerino",
+  "license": "MIT",
+  "private": false,
+  "description": "Repository created to record my practice learning SASS & CSS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NicolasOmar/styling-practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NicolasOmar/styling-practice/issues"
+  },
+  "homepage": "https://github.com/NicolasOmar/styling-practice#readme",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "semantic-release": "^23.0.0"
+  }
+}
