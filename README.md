@@ -15,12 +15,13 @@ Repository created to record my practice learning CSS and SASS with exercises ba
 ### What does that version number mean?
 | Number | Meaning |
 | ------ | ------ |
-| `X.0.0` | How many assignments/examples I have completed |
-| `0.X.0` | How many times I have updated the next assignment/example |
-| `0.0.X` | How many times I have updated the next assignment/example |
+| `X.0.0` | How many exercises I have completed |
+| `0.X.0` | How many times I made progress on my next exercise |
+| `0.0.X` | Dependencies version updates and specific patches while course is not completed |
 
 ## Requirements
-To be added in the next versions
+- [Node](https://nodejs.org/en/download/) `v20.10.0` or above
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) (VisualStudio Code Extension) to launch a development local server.
 
 ## Setup
 Just in case you want to make your own version with specific releases and version updates.
@@ -32,10 +33,13 @@ npm install
 ```
 
 ## How to run it
-To be added in the next versions
+- Open any of the `index.html` files on the folders.
+- Click on `Go Live` button on VSCode bottom-right corner.
 
 ## Repo structure & what i learned in each exercise
-To be added in the next versions
+- Natorus project (`1-natorus` folder)
+  - Refreshing some concepts related to coloring and positioning (using `relative` and `absolute`)
+  - Handle element properties with `transform` and `translate`
 
 ## Other practice repos
 | Node | Angular | GraphQL | React | Typescript | HTML & CSS |
