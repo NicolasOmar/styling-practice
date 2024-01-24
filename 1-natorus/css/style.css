@@ -10,17 +10,30 @@ Dark green: #28b485
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  /* Set font-size to pixels is considered a bad practice */
+  /* font-size: 10px; */
+  /*
+    Is the percentage of the browser's default value, which in Chrome is 16px (at 22/01/24)
+    To achieve the 10px proposed before, you divide 10 by 16
+  */
+  font-size: 62.5%;
 }
 
 body {
   font-family: Lato, sans-serif;
   font-weight: 400;
-  font-size: 16px;
   /* Is 1.7 times the default font size */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  /* 1rem = root font-size, therefore is 10px */
+  /* Is better to use rem than em because em depends on root document and parent element's font size */
+  /* Just to be sure, rem does not work on browsers like Internet Explirer 9 or before */
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -47,12 +60,12 @@ body {
 .logo-box {
   position: absolute;
   /* Uses element's parent as reference to be positioned */
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .text-box {
@@ -70,16 +83,16 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  padding-bottom: 2rem;
 }
 
 .heading-primary-main {
   /* Block elements take all screen's width and create a whitespace */
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
   /* Determines the space between each letter */
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   /* You set the animation for this element */
   animation-name: move-in-left;
   /* And its duration */
@@ -94,9 +107,9 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.5px;
+  letter-spacing: 1.75rem;
   animation-name: move-in-right;
   animation-duration: 2s;
 }
@@ -110,11 +123,11 @@ body {
     /* Element must not be visible */
     opacity: 0;
     /* You set the element 100 pixels on inverse X way (from right to left) */
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   60% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -128,11 +141,11 @@ body {
 @keyframes move-in-right {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   60% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -149,25 +162,26 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   /* All properties are enabled to be animated */
   transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
   /* The Y axis moves from the top to the bottom, the negative value indicates from bottom to top */
-  transform: translateY(-3px);
+  transform: translateY(-0.3px);
   /* Shadow uses the values for: X axis, Y axis, how blurry you want it and its color */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 20%);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 20%);
 }
 
 /* Active is used when the element is clicked */
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 1px rgba(0, 0, 0, 20%);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 20%);
 }
 
 .btn-white {
@@ -183,7 +197,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -207,7 +221,7 @@ body {
 @keyframes move-in-button {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(10rem);
   }
 
   100% {
