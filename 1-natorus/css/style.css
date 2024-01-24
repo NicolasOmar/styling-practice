@@ -78,6 +78,16 @@ body {
   font-weight: 400;
   /* Determines the space between each letter */
   letter-spacing: 35px;
+  /* You set the animation for this element */
+  animation-name: move-in-left;
+  /* And its duration */
+  animation-duration: 3s;
+  /* The animation will wait 3 seconds before start working */
+  /* animation-delay: 3s; */
+  /* How many times the animation will happen */
+  /* animation-iteration-count: 2; */
+  /* You can add all mentioned properties with animation */
+  /* animation: move-in-left 1s; */
 }
 
 .heading-primary-sub {
@@ -85,4 +95,46 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.5px;
+  animation-name: move-in-right;
+  animation-duration: 3s;
+}
+
+/*
+  keyframes, a transition function/logic which you give the animation a name
+  then you create the related states of your animation based on its progress (from 0 to 100%)
+*/
+@keyframes move-in-left {
+  0% {
+    /* Element must not be visible */
+    opacity: 0;
+    /* You set the element 100 pixels on inverse X way (from right to left) */
+    transform: translateX(-100px);
+  }
+
+  60% {
+    transform: translateX(15px);
+  }
+
+  100% {
+    opacity: 1;
+    /* you put the element back to position X=0, Y=0 */
+    transform: translate(0);
+  }
+}
+
+/* Different keyframe from left to right */
+@keyframes move-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  60% {
+    transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

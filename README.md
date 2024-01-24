@@ -40,6 +40,7 @@ npm install
 - Natorus project (`1-natorus` folder)
   - Refreshing some concepts related to coloring and positioning (using `relative` and `absolute`)
   - Handle element properties with `transform` and `translate`
+  - Learn to create custom animations using `@keyframes` and `animation`
 
 ## Other practice repos
 | Node | Angular | GraphQL | React | Typescript | HTML & CSS |
