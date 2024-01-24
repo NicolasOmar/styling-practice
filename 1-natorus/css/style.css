@@ -64,11 +64,13 @@ body {
     translate is the function that will change element's width and height with the number we want.
   */
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
 .heading-primary-main {
@@ -81,9 +83,9 @@ body {
   /* You set the animation for this element */
   animation-name: move-in-left;
   /* And its duration */
-  animation-duration: 3s;
+  animation-duration: 2s;
   /* The animation will wait 3 seconds before start working */
-  /* animation-delay: 3s; */
+  /* animation-delay: 2s; */
   /* How many times the animation will happen */
   /* animation-iteration-count: 2; */
   /* You can add all mentioned properties with animation */
@@ -96,7 +98,7 @@ body {
   font-weight: 700;
   letter-spacing: 17.5px;
   animation-name: move-in-right;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 /*
@@ -112,7 +114,7 @@ body {
   }
 
   60% {
-    transform: translateX(15px);
+    transform: translateX(10px);
   }
 
   100% {
@@ -130,11 +132,95 @@ body {
   }
 
   60% {
-    transform: translateX(-15px);
+    transform: translateX(-10px);
   }
 
   100% {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+/*
+  :link is used when an element is an anchor tag (like <a />)
+  :visited is used when a link has been clicked before
+*/
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  /* All properties are enabled to be animated */
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  /* The Y axis moves from the top to the bottom, the negative value indicates from bottom to top */
+  transform: translateY(-3px);
+  /* Shadow uses the values for: X axis, Y axis, how blurry you want it and its color */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 20%);
+}
+
+/* Active is used when the element is clicked */
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 20%);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+/* Pseudo element */
+.btn::after {
+  /* You need to add the content property to enable pseudo-element with its properties */
+  content: '';
+  /* Also need to indicate its display property */
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Indicates the element will be behind others */
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  /* You can set the scale transformation in both axis using scale only or adjusting with scaleX and scaleY */
+  transform: scaleX(1.25) scaleY(1.5);
+  /* transform: scale(1.5); */
+  opacity: 0;
+}
+
+/* Different keyframe from left to right */
+@keyframes move-in-button {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn-animated {
+  /*
+    Transition third argument is set to handle animation speed at first or at finish
+    Its fourth argument is to set a delay before execute the animation
+  */
+  animation: move-in-button 2s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }

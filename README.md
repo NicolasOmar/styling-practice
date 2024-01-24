@@ -41,6 +41,8 @@ npm install
   - Refreshing some concepts related to coloring and positioning (using `relative` and `absolute`)
   - Handle element properties with `transform` and `translate`
   - Learn to create custom animations using `@keyframes` and `animation`
+  - Refreshing some concepts related to pseudo-classes (using `:link` and `:visited`)
+  - Learn how to use pseudo-elements like `::after`
 
 ## Other practice repos
 | Node | Angular | GraphQL | React | Typescript | HTML & CSS |
