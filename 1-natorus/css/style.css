@@ -14,7 +14,7 @@ Dark green: #28b485
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: 400;
   font-size: 16px;
   /* Is 1.7 times the default font size */
@@ -27,10 +27,11 @@ body {
   height: 95vh;
   /* Linear gradient fill be fit before the real background image */
   background-image: linear-gradient(
-    to right,
-  hsla(111, 55%, 64%, 0.8),
-  hsla(160, 64%, 43%, 0.8)
-  ), url('../img/hero.jpg');
+      to right,
+      hsl(111deg, 55%, 64%, 80%),
+      hsl(160deg, 64%, 43%, 80%)
+    ),
+    url('../img/hero.jpg');
   /* Fit the element to screen's width */
   background-size: cover;
   /* Ensure the background will be on page's top */
@@ -66,7 +67,7 @@ body {
 }
 
 .heading-primary {
-  color: #FFF;
+  color: #fff;
   text-transform: uppercase;
 }
 
