@@ -30,7 +30,11 @@ body {
 .header {
   height: 95vh;
   /* Linear gradient fill be fit before the real background image */
-  background-image: linear-gradient(to right, #7ed56f, #28b485),
+  background-image: linear-gradient(
+      to right,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    ),
     url('../img/hero.jpg');
   /* Fit the element to screen's width */
   background-size: cover;
@@ -43,26 +47,23 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   position: relative;
 }
-
 .header__logo-box {
   position: absolute;
   /* Uses element's parent as reference to be positioned */
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo {
   height: 3.5rem;
 }
-
 .header__text-box {
   position: absolute;
   top: 45%;
   left: 50%;
   /*
-    transform is used to handle certain properties of the element
-    translate is the function that will change element's width and height with the number we want.
-  */
+      transform is used to handle certain properties of the element
+      translate is the function that will change element's width and height with the number we want.
+    */
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -72,7 +73,6 @@ body {
   text-transform: uppercase;
   padding-bottom: 2rem;
 }
-
 .heading-primary--main {
   /* Block elements take all screen's width and create a whitespace */
   display: block;
@@ -91,7 +91,6 @@ body {
   /* You can add all mentioned properties with animation */
   /* animation: move-in-left 1s; */
 }
-
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -137,10 +136,26 @@ body {
   }
 }
 
-/*
-  :link is used when an element is an anchor tag (like <a />)
-  :visited is used when a link has been clicked before
-*/
+/* Different keyframe from left to right */
+@keyframes move-in-button {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn {
+  /*
+    :link is used when an element is an anchor tag (like <a />)
+    :visited is used when a link has been clicked before
+  */
+  /* Active is used when the element is clicked */
+  /* Pseudo element */
+}
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -153,26 +168,22 @@ body {
   position: relative;
   font-size: 1.6rem;
 }
-
 .btn:hover {
   /* The Y axis moves from the top to the bottom, the negative value indicates from bottom to top */
   transform: translateY(-0.3px);
   /* Shadow uses the values for: X axis, Y axis, how blurry you want it and its color */
   box-shadow: 0 1rem 2rem black;
 }
-
-/* Active is used when the element is clicked */
+.btn:hover::after {
+  /* You can set the scale transformation in both axis using scale only or adjusting with scaleX and scaleY */
+  transform: scaleX(1.25) scaleY(1.5);
+  /* transform: scale(1.5); */
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 0.1rem black;
 }
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-
-/* Pseudo element */
 .btn::after {
   /* You need to add the content property to enable pseudo-element with its properties */
   content: '';
@@ -188,35 +199,18 @@ body {
   z-index: -1;
   transition: all 0.5s;
 }
-
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
 .btn--white::after {
   background-color: #fff;
 }
-
-.btn:hover::after {
-  /* You can set the scale transformation in both axis using scale only or adjusting with scaleX and scaleY */
-  transform: scaleX(1.25) scaleY(1.5);
-  /* transform: scale(1.5); */
-  opacity: 0;
-}
-
-/* Different keyframe from left to right */
-@keyframes move-in-button {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
 .btn--animated {
   /*
-    Transition third argument is set to handle animation speed at first or at finish
-    Its fourth argument is to set a delay before execute the animation
-  */
+      Transition third argument is set to handle animation speed at first or at finish
+      Its fourth argument is to set a delay before execute the animation
+    */
   animation: move-in-button 2s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
