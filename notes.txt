@@ -1,0 +1,52 @@
+Responsive (web) design
+  A website can work without problem on all posible devices
+    Fluid layouts
+    Media queries
+    Responsive images
+    Correct units
+    Desktop or mobile-first
+
+Maintainable and calable code
+
+Web performance
+
+DOM, describes the whole page (html code) as a family tree
+
+Cascade, process of combining different stylesheets and resolving conflicts between different css rukes and declarations, when more than one rule applies to a certain element
+
+Stacking context
+highest z-index appears first
+
+CSS Architecture, components and bem
+
+think > build > architect mindset
+
+think
+  component driven design
+    modular building blocks to make interfaces
+    held together by the layout of the page
+    reusable acroos a project and between projects
+    should be independent (do not depend its parent element)
+
+
+build
+  bem: block element modified
+    .block__element--modifier
+      block: standalone component
+      element: part of a block that has no standalone meaning
+      modifier: different version og a block or an element
+
+architect
+  smacs
+  logical file and folder structure
+  7-1 patter
+    7 different folders for partial sass files
+      base
+      components
+      layout
+      pages
+      themes
+      abstracts
+      vendors
+    1 main sass file to import partial
+    a compiled css stylesheet

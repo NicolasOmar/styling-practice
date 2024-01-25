@@ -43,7 +43,8 @@ npm install
   - Learn to create custom animations using `@keyframes` and `animation`
   - Refreshing some concepts related to pseudo-classes (using `:link` and `:visited`)
   - Learn how to use pseudo-elements like `::after`
-  - Learn how to more maintainable styles using relative units like `rem` or `em`
+  - Learn how to impement a more maintainable styling using relative units like `rem` or `em`
+  - Learn about `bem` ([block element modifier](https://getbem.com/)) and implement it in current project status
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint))
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky))
