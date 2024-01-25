@@ -50,3 +50,17 @@ architect
       vendors
     1 main sass file to import partial
     a compiled css stylesheet
+
+sass, css preprocessor
+  variables, reusable values
+  nesting, nest selectors
+  operator for mathematical operations
+  partial and imports to write in different files and importing them into one single
+  mixins to write reusable pieces of css code
+  functions, similar to mixins to produce a values
+  extends: to make seelctors inherit common declarations (reuse code)
+  control directive: writing complex code using conditionals and loops (more used for css frameworks)
+
+  uses two sintaxes
+    sass
+    scss (sassy sass), is more used

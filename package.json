@@ -18,7 +18,9 @@
     "lint-staged": "lint-staged -v",
     "prettier": "prettier **/*.{html,css,scss} --write",
     "prettier:check": "prettier **/*.{html,css,scss} --check",
-    "styles:check": "stylelint \"**/*.css\"",
+    "styles:check": "stylelint \"**/*.scss\"",
+    "styles:compile": "node-sass 1-natorus/sass/main.scss 1-natorus/css/style.css",
+    "styles:watch": "node-sass 1-natorus/sass/main.scss 1-natorus/css/style.css -w",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -30,16 +32,17 @@
     "@semantic-release/release-notes-generator": "^12.1.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.0",
+    "node-sass": "^9.0.0",
     "prettier": "^3.2.4",
     "semantic-release": "^23.0.0",
     "stylelint": "^16.2.0",
     "stylelint-config-standard": "^36.0.0"
   },
   "lint-staged": {
-    "**/*.html": [
+    "**/*.(html|css)": [
       "prettier --write"
     ],
-    "**/*.(css|scss)": [
+    "**/*.scss": [
       "prettier --write",
       "stylelint"
     ]

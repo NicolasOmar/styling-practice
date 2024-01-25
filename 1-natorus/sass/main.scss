@@ -1,3 +1,9 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-white: #fff;
+
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +25,7 @@ body {
   font-weight: 400;
   /* Is 1.7 times the default font size */
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   /* 1rem = root font-size, therefore is 10px */
   /* Is better to use rem than em because em depends on root document and parent element's font size */
   /* Just to be sure, rem does not work on browsers like Internet Explirer 9 or before */
@@ -30,7 +36,11 @@ body {
 .header {
   height: 95vh;
   /* Linear gradient fill be fit before the real background image */
-  background-image: linear-gradient(to right, #7ed56f, #28b485),
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-light, 80%),
+      rgba($color-primary-dark, 80%)
+    ),
     url('../img/hero.jpg');
   /* Fit the element to screen's width */
   background-size: cover;
@@ -68,7 +78,7 @@ body {
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   padding-bottom: 2rem;
 }
@@ -112,9 +122,11 @@ body {
     /* You set the element 100 pixels on inverse X way (from right to left) */
     transform: translateX(-10rem);
   }
+
   60% {
     transform: translateX(1rem);
   }
+
   100% {
     opacity: 1;
     /* you put the element back to position X=0, Y=0 */
@@ -128,9 +140,11 @@ body {
     opacity: 0;
     transform: translateX(10rem);
   }
+
   60% {
     transform: translateX(-1rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
@@ -158,13 +172,13 @@ body {
   /* The Y axis moves from the top to the bottom, the negative value indicates from bottom to top */
   transform: translateY(-0.3px);
   /* Shadow uses the values for: X axis, Y axis, how blurry you want it and its color */
-  box-shadow: 0 1rem 2rem black;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 20%);
 }
 
 /* Active is used when the element is clicked */
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 0.1rem black;
+  box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 20%);
 }
 
 .btn--white {
@@ -206,6 +220,7 @@ body {
     opacity: 0;
     transform: translateY(10rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
