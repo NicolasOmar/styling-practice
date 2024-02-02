@@ -54,6 +54,10 @@ npm run setup:all
   - Learn about `bem` ([block element modifier](https://getbem.com/)) and implement it in current project status
   - Learn `sass` basics (like variables, nesting, operators, mixins and functions)
   - Install sass compiler with [node-sass](https://www.npmjs.com/package/node-sass) to generate css code using `scss` sintaxis.
+  - How to build a sass achitecture based on [7*1 pattern](https://sass-guidelin.es/#the-7-1-pattern) and move the code following the structure.
+  - How to create a grid system from scratch (styling like Bootstrap).
+  - Learn how to use mixings for repetitive pieces of styling code
+  - Learn how to use `calc` function for calculated values (like specific widths)
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint))
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky))

@@ -1,6 +1,6 @@
 /* We import the partial files (which start with an underscore) using @import keyword */
 /* ABSTRACTS */
-/* @import "abstracts/mixins"; */
+@import 'abstracts/mixins';
 @import 'abstracts/variables';
 /* @import "abstracts/functions"; */
 /* BASE */
@@ -12,3 +12,4 @@
 @import 'components/button';
 /* LAYOUT */
 @import 'layout/header';
+@import 'layout/grid';
