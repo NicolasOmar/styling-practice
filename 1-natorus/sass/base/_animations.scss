@@ -1,0 +1,52 @@
+/*
+  keyframes, a transition function/logic which you give the animation a name
+  then you create the related states of your animation based on its progress (from 0 to 100%)
+*/
+@keyframes move-in-left {
+  0% {
+    /* Element must not be visible */
+    opacity: 0;
+    /* You set the element 100 pixels on inverse X way (from right to left) */
+    transform: translateX(-10rem);
+  }
+
+  60% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    /* you put the element back to position X=0, Y=0 */
+    transform: translate(0);
+  }
+}
+
+/* Different keyframe from left to right */
+@keyframes move-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  60% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* Different keyframe from element's bottom to its center */
+@keyframes move-in-button {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

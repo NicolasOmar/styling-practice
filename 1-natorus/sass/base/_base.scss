@@ -1,0 +1,21 @@
+/* Basic css rules for resets, styles for html and body elements */
+/* All partial files start with an underscore */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* Set font-size to pixels is considered a bad practice */
+  /* font-size: 10px; */
+  /*
+    Is the percentage of the browser's default value, which in Chrome is 16px (at 22/01/24)
+    To achieve the 10px proposed before, you divide 10 by 16
+  */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
