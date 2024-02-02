@@ -43,3 +43,27 @@ body {
     animation-duration: 2s;
   }
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  /* [background-clip] it will clip the background to the places you want (in this case, the text) */
+  background-clip: text;
+  /* To display the clipped color, you should set the text color to transparent */
+  color: transparent;
+  letter-spacing: 2px;
+  /* When a transformation takes effect, transition sets how it will looks at users eyes */
+  transition: all 0.2s;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
