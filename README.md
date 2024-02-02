@@ -29,12 +29,19 @@ After cloning the repo, go to the created folder and install the node packages.
 ```sh
 git clone https://github.com/NicolasOmar/styling-practice.git
 cd styling-practice
-npm install
+npm run setup:all
 ```
 
+`setup:all` is the command to install all the projects, but if you want to do it one by one, you can change that last line for one of the following:
+| App Setup | Command |
+| ------ | ------ |
+| All | `npm run setup:all` |
+| Natorus | `npm run setup:natorus` |
+
 ## How to run it
-- Open any of the `index.html` files on the folders.
+- Open the `index.html` file on any of exercise's index.
 - Click on `Go Live` button on VSCode bottom-right corner.
+  - It should open a new windows with your page
 
 ## Repo structure & what i learned in each exercise
 - Natorus project (`1-natorus` folder)

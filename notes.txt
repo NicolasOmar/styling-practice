@@ -39,7 +39,7 @@ build
 architect
   smacs
   logical file and folder structure
-  7-1 patter
+  7-1 pattern
     7 different folders for partial sass files
       base
       components
@@ -64,3 +64,22 @@ sass, css preprocessor
   uses two sintaxes
     sass
     scss (sassy sass), is more used
+
+Responsive
+  fluid layout
+    allow webpage to adapt to the current viewport width
+    use % (or vh[view height]/vw[view width]) unit instead px
+    use max-width instead of width
+  responsive units
+    use rem instead px
+    help to scale the layout automatically
+  flexible images
+    images do not scale in automated way as we change the viewport
+    so we need to use % for image dimensions with max-width property
+  media queries
+    changes css styles on certain viewport widts
+
+  Which types of layouts exists
+    [in 1st exercise] > float: old way of building, using float css property
+    [in 2dn exercise] > flexbox: use a 1-dimensional row without using floats, useful for component layouts
+    [in 3rd exercise] > css used for 2-dimensional rows
