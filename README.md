@@ -60,6 +60,7 @@ npm run setup:all
   - Learn how to use `calc` function for calculated values (like specific widths).
   - Learn how to manipulate text styling with `background-clip` and `color: transparent`.
   - Learn how to create frames in an element with `outline` and `outile-offset`.
+  - Learn how to select specific elements using direct childs (with `>`).
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).

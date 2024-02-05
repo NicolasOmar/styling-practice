@@ -1,0 +1,28 @@
+.feature-box {
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.6rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  transition: all 0.5s;
+
+  &__icon {
+    /* Is an icon that uses font, so we use font properties */
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    /* [background-clip] it will clip the background to the places you want (in this case, the text) */
+    background-clip: text;
+    /* To display the clipped color, you should set the text color to transparent */
+    color: transparent;
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.05);
+  }
+}

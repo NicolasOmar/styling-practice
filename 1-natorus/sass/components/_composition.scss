@@ -37,6 +37,12 @@
     }
   }
 
+  /*
+    This part is not nested because you are looking for:
+    - If you are hovering the [composition] class element
+    - And you are not hovering an element with [composition__photo] class
+    - Then you execute the css code, scale them less
+  */
   &:hover &__photo:not(:hover) {
     transform: scale(0.9);
   }

@@ -4,3 +4,21 @@
   /* negative margin moves the element to the way it was indicated (in this case, top) */
   margin-top: -20vh;
 }
+
+.section-features {
+  padding: 20rem 0;
+  /* Linear gradient fill be fit before the real background image */
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url('../img/nat-4.jpg');
+  margin-top: -20vh;
+  transform: skewY(-7deg);
+
+  /* You are selecting a direct child with [>], in this case, every one using [*] */
+  & > * {
+    transform: skewY(7deg);
+  }
+}
