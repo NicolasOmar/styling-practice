@@ -83,3 +83,5 @@ Responsive
     [in 1st exercise] > float: old way of building, using float css property
     [in 2dn exercise] > flexbox: use a 1-dimensional row without using floats, useful for component layouts
     [in 3rd exercise] > css used for 2-dimensional rows
+
+  utility classes

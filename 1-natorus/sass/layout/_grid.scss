@@ -1,7 +1,6 @@
 .row {
   /* [max-width] takes all screen's width but limited to the value, in case the screen is bigger, the element will only take up to its setted value */
   max-width: $grid-width;
-  background-color: $color-grey-light;
   /* How to center a block element in another block element */
   margin: 0 auto;
 
@@ -25,7 +24,6 @@
     After you add the selector, include the equalizer you need, in this case [^=] means all which starts with the following text
   */
   [class^='col-'] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
