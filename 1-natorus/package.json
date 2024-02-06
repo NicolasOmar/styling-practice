@@ -5,8 +5,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "styles:compile": "node-sass sass/main.scss css/style.css --output-style=compressed",
-    "styles:watch": "npm run styles:compile -- -w"
+    "compile": "node-sass sass/main.scss css/style.css --output-style=compressed",
+    "watch": "npm run compile -- -w"
   },
   "devDependencies": {
     "node-sass": "^9.0.0"
