@@ -45,10 +45,11 @@ npm run setup:all
 
 ## Repo structure & what I learned in each exercise
 - Natorus project (`1-natorus` folder)
-  - Refreshing some concepts related to coloring and positioning (using `relative` and `absolute`).
+  - Refreshing concepts related to coloring and positioning (using `relative` and `absolute`).
+  - Refreshing concepts related to center elements in several situations like `inline`, `block` and `boxed` elements using different strategies.
   - Make animate/transform elements with `transform`, `translate`, `skew`, `scale` and `rotate`.
   - Learn to create custom animations using `@keyframes` and `animation`.
-  - Refreshing some concepts related to pseudo-classes (using `:link` and `:visited`).
+  - Refreshing concepts related to pseudo-classes (using `:link` and `:visited`).
   - Learn how to use pseudo-elements like `::after`.
   - Learn how to implement a more maintainable style using relative units like `rem` or `em`.
   - Learn about `bem` ([block element modifier](https://getbem.com/)) and implement it in current project status.
@@ -62,6 +63,7 @@ npm run setup:all
   - Learn how to create frames in an element with `outline` and `outline-offset`.
   - Learn to select specific elements using direct children (with `>`).
   - Learn how to use `perspective` and `backface-visibility` to include two or more sides of an element that are overlapping
+  - Learn how to apply a consistent styling in a span (for example) by using `box-decoration-break`
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
