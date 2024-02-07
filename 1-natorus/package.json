@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "start": "npm run compile && npm run watch",
     "compile": "node-sass sass/main.scss css/style.css --output-style=compressed",
     "watch": "npm run compile -- -w"
   },

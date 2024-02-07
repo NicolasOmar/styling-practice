@@ -62,13 +62,14 @@ npm run setup:all
   - Learn how to manipulate text styling with `background-clip` and `color: transparent`.
   - Learn how to create frames in an element with `outline` and `outline-offset`.
   - Learn to select specific elements using direct children (with `>`).
-  - Learn how to use `perspective` and `backface-visibility` to include two or more sides of an element that are overlapping
-  - Learn how to apply a consistent styling in a span (for example) by using `box-decoration-break`
+  - Learn how to use `perspective` and `backface-visibility` to include two or more sides of an element that are overlapping.
+  - Learn how to apply a consistent styling in a span (for example) by using `box-decoration-break`.
+  - Learn how to wrap elements shape around another shape using `shape-outside`.
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
 
 ## Other practice repos
-| Node | Angular | GraphQL | React | Typescript | HTML & CSS |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| [<img src="https://cdn.simpleicons.org/node.js" title="Node Practice Repo" alt="Node Practice Repo" width="48">](https://github.com/NicolasOmar/node-practice) | [<img src="https://cdn.simpleicons.org/angular" title="Angular Practice Repo" alt="Angular Practice Repo" width="48">](https://github.com/NicolasOmar/angular-practice) | [<img src="https://cdn.simpleicons.org/graphql" title="GraphQL Practice Repo" alt="GraphQL Practice Repo" width="48">](https://github.com/NicolasOmar/graphql-practice) | [<img src="https://cdn.simpleicons.org/react" title="React Practice Repo" alt="React Practice Repo" width="48">](https://github.com/NicolasOmar/react-practice) | [<img src="https://cdn.simpleicons.org/typescript" title="Typescript Practice Repo" alt="Typescript Practice Repo" width="48">](https://github.com/NicolasOmar/typescript-practice) |  [<img src="https://cdn.simpleicons.org/html5" title="HTML and CSS Practice Repo" alt="HTML and CSS Practice Repo" width="48px">](https://github.com/NicolasOmar/html-css-practice) |
+| Node | Angular | GraphQL | React | Typescript | HTML & CSS | Docker |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| [<img src="https://cdn.simpleicons.org/node.js" title="Node Practice Repo" alt="Node Practice Repo" width="48">](https://github.com/NicolasOmar/node-practice) | [<img src="https://cdn.simpleicons.org/angular" title="Angular Practice Repo" alt="Angular Practice Repo" width="48">](https://github.com/NicolasOmar/angular-practice) | [<img src="https://cdn.simpleicons.org/graphql" title="GraphQL Practice Repo" alt="GraphQL Practice Repo" width="48">](https://github.com/NicolasOmar/graphql-practice) | [<img src="https://cdn.simpleicons.org/react" title="React Practice Repo" alt="React Practice Repo" width="48">](https://github.com/NicolasOmar/react-practice) | [<img src="https://cdn.simpleicons.org/typescript" title="Typescript Practice Repo" alt="Typescript Practice Repo" width="48">](https://github.com/NicolasOmar/typescript-practice) |  [<img src="https://cdn.simpleicons.org/html5" title="HTML and CSS Practice Repo" alt="HTML and CSS Practice Repo" width="48px">](https://github.com/NicolasOmar/html-css-practice) | [<img src="https://cdn.simpleicons.org/docker" title="Docker Practice Repo" alt="Docker Practice Repo" width="48px">](https://github.com/NicolasOmar/docker-practice) |

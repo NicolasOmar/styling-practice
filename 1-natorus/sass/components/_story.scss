@@ -1,0 +1,43 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: $color-white;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  /*
+    Remember you can modify the element shape with skewX
+    But the rest of its children elements must have an inverse skewX value to be shown as the original
+  */
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+    float: left;
+    /*
+      When you want to make elements fits around a shape, you can use the [shape-outside] property
+      For this exercise, we assigned a circle shape, which has the following arguments
+      - Which is going to be its radius. With 50% at 50% (X and Y axis), you are taking half of element's size, giving the original total size
+      - Then you assign circle's center, on this case is at shape's half (perfect center)
+      () It only works on floating elements
+    */
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    /* To move a shaped element, the best advide is to use a transform+translate instead margins or paddings */
+    transform: translateX(-3rem) skewX(12deg);
+  }
+
+  &__img {
+    /* The image inside a shape element should use a width and height at 100% to be fit iside */
+    width: 100%;
+    height: 100%;
+  }
+}
