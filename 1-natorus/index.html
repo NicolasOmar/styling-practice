@@ -326,19 +326,51 @@
           </section>
         </section>
 
-        <div class="u-center-text u-margin-bottom-big u-margin-top-huge">
+        <section class="u-center-text u-margin-bottom-big u-margin-top-huge">
           <a
             href="#"
             class="btn btn--green"
             >Discover all tours</a
           >
-        </div>
+        </section>
       </section>
 
       <section class="section-stories">
+        <section class="bg-video">
+          <!--
+            For video tags
+            put [autoplay] will start the media at start
+            put [muted] to watch it without sound
+            put [loop] re-watch it without manual work
+          -->
+          <video
+            class="bg-video__content"
+            autoplay
+            muted
+            loop
+          >
+            <source
+              src="img/video.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="img/video.webm"
+              type="video/webm"
+            />
+            <!--
+              In case you want to include several videos (which are the same, but using different formats)
+              You should include a list of sources in priority order to indicate which should be the first in be shown
+              In case user's browser does not support any of the formats in the list
+              You will show a legend to indicate that situation
+            -->
+            Your browser does not support this video!
+          </video>
+        </section>
+
         <section class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">We make people genuinely happy</h2>
         </section>
+
         <section class="row">
           <section class="story">
             <figure class="story__shape">
@@ -347,7 +379,9 @@
                 alt="Person on a tour"
                 class="story__img"
               />
+              <figcaption class="story__caption">Mary Smith</figcaption>
             </figure>
+
             <section class="story__text">
               <h3 class="heading-tertiary u-margin-bottom-small"
                 >I had the best weekend ever with my family</h3
@@ -360,6 +394,39 @@
               >
             </section>
           </section>
+        </section>
+
+        <section class="row">
+          <section class="story">
+            <figure class="story__shape">
+              <img
+                src="img/nat-9.jpg"
+                alt="Person on a tour"
+                class="story__img"
+              />
+              <figcaption class="story__caption">Jack Wilson</figcaption>
+            </figure>
+
+            <section class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small"
+                >WOW! My life is completely different now</h3
+              >
+              <p
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                aliquid perferendis neque, fuga, sint quis eligendi voluptates
+                consequuntur dolore nam quos? Accusamus facilis culpa laudantium
+                veniam mollitia recusandae repudiandae aperiam.</p
+              >
+            </section>
+          </section>
+        </section>
+
+        <section class="u-center-text u-margin-top-huge">
+          <a
+            href="#"
+            class="btn-text"
+            >Read all stories &rarr;</a
+          >
         </section>
       </section>
     </main>
