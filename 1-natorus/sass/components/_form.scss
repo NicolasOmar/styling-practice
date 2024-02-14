@@ -19,6 +19,7 @@
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
+    transition: all 0.5s;
 
     &:focus {
       /* Setting outline to none will disable focused input's distinctive border, but it should be replaced by other option for accesibility */
@@ -36,5 +37,27 @@
     &::-webkit-input-placeholder {
       color: $color-grey-darker;
     }
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+  }
+
+  /* Adjacent sibiling, you are selecting the first sibiling of the element you are selecting */
+  /* I am not including this code inside &__input because the selector will search for {form__input_label} instead of {form__label} */
+  &__input:placeholder-shown + &__label {
+    /*
+      To make a animated hidden element (on this case, input's label), you need>
+      - [opacitiy] is to set its color to none and animate it when it needs to be shown or hidden
+      - [visibility] is to avoid the element occupies space when its opacity is 0 (it cannot be animated)
+    */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+    transition: all 0.5s;
   }
 }
