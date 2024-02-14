@@ -1,0 +1,40 @@
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    /*
+      Form inputs do not use users [font-family] by default (browser's default behaviour)
+      A solution for the issue is inject the one we want by declaring to use the inherited one
+    */
+    font-family: inherit;
+    /* It happens the same for input's [color] */
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+
+    &:focus {
+      /* Setting outline to none will disable focused input's distinctive border, but it should be replaced by other option for accesibility */
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
+
+      /* [:invalid] is useful when an input has an invalid value (having the HTML logic in account) */
+      &:invalid {
+        border-bottom: 3px solid $color-secondary-dark;
+      }
+    }
+
+    /* [-webkit-input-placeholder] is a pseudo element to be used in webkit and chromiun */
+    &::-webkit-input-placeholder {
+      color: $color-grey-darker;
+    }
+  }
+}
