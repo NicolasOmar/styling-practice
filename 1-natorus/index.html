@@ -439,7 +439,54 @@
                     >Email Address</label
                   >
                 </section>
-                <section class="form__group"></section>
+
+                <section class="form__group u-margin-bottom-medium">
+                  <!-- For <radio> inputs, the group should have the same [name] value -->
+                  <section class="form__radio-group">
+                    <!--
+                      It is not possible to style an <radio> input
+                      Therefore you have to take an alternative
+                    -->
+                    <input
+                      type="radio"
+                      name="size"
+                      id="small"
+                      class="form__radio-input"
+                    />
+                    <label
+                      for="small"
+                      class="form__radio-label"
+                    >
+                      <!-- The <span> will be used as the button because its parent label will select the input because is bounded to it -->
+                      <span class="form__radio-button"></span>
+                      Small tour group
+                    </label>
+                  </section>
+
+                  <section class="form__radio-group">
+                    <input
+                      type="radio"
+                      name="size"
+                      id="large"
+                      class="form__radio-input"
+                    />
+                    <label
+                      for="large"
+                      class="form__radio-label"
+                    >
+                      <span class="form__radio-button"></span>
+                      Large tour group
+                    </label>
+                  </section>
+                </section>
+
+                <section class="form__group">
+                  <button
+                    type="submit"
+                    class="btn btn--green"
+                    >Next Step &rarr;</button
+                  >
+                </section>
               </form>
             </section>
           </section>

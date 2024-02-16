@@ -60,4 +60,58 @@
     transform: translateY(-4rem);
     transition: all 0.5s;
   }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 5rem;
+  }
+
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -0.4rem;
+    left: 0;
+
+    /* This makes reference to element's inner element */
+    &::after {
+      content: '';
+      display: block;
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      /* Its parent can have absolute position aswell, it only matters it is assigned in the code */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  /*
+    If your {__radio-input} is checked
+    Go to its first sibiling, a {__radio-label}
+    Then, go to its child, {__radio-button}
+    And to its inner element with [::after]
+  */
+  &__radio-input:checked + &__radio-label > &__radio-button::after {
+    opacity: 1;
+  }
 }

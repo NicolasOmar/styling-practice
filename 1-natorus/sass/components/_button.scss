@@ -3,6 +3,7 @@
     :link is used when an element is an anchor tag (like <a />)
     :visited is used when a link has been clicked before
   */
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -14,6 +15,8 @@
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+    border: none;
+    cursor: pointer;
   }
 
   /* Pseudo element */
@@ -48,7 +51,9 @@
   }
 
   /* Active is used when the element is clicked */
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 0.1rem rgba($color-black, 0.2);
   }
