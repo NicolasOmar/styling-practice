@@ -6,6 +6,16 @@
   position: fixed;
   top: 0;
   left: 0;
+  /* Usind [display: none] will disable element's animations */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  /* When you click in a target element (by its id), you will add some css */
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
 
   &__content {
     background-color: $color-white;
@@ -59,5 +69,23 @@
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
