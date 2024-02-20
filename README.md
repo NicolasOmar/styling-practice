@@ -75,6 +75,8 @@ npm run setup:all
   - How to handle an animated toggle display using `opacity`, `visibility` and `transform`.
   - How to style custom `<radio>` inputs.
   - How to move a background to be animated using `background-size` and `background-position`.
+  - How to create a custom transition using `cubic-bezier`.
+  - How to create a burger menu that changes when is clicked.
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
