@@ -77,6 +77,8 @@ npm run setup:all
   - How to move a background to be animated using `background-size` and `background-position`.
   - How to create a custom transition using `cubic-bezier`.
   - How to create a burger menu that changes when is clicked.
+  - How to adjust element's postion using `table` display (examples with `table` and `table-cell`)
+  - How to format a long text into several columns using properties like `column-count`, `column-gap` and `column-rule`.
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
