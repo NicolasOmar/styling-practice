@@ -1,0 +1,208 @@
+.card {
+  /*
+    [perspective] is defined in is parent, which in this case is the card element
+    the lower the value, the more dramatic its effect (in case of rotate on this component)
+  */
+  perspective: 150rem;
+  position: relative;
+  /* When you have absolute children elements, parent's width gets collapsed, therefore you must set a specific height to avoid this collapsing */
+  height: 52rem;
+
+  &__side {
+    height: 52rem;
+    transition: all 0.75s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* You must set a specific width because absolute elements use minimun width by default */
+    width: 100%;
+    /* You are hidding the element at the back (in this case, the one with [.card__side--back] */
+    backface-visibility: hidden;
+    border-radius: 3px;
+    /* In case your image or content is overlaping the rest of the element (and overlaps its border radius), you add [overflow: hidden] to fix the issue */
+    overflow: hidden;
+    /*
+      box-shadow parameters are:
+        - shadow on X axis
+        - shadow on Y axis
+        - how big will it be
+        - which color will use
+          in this case, we set rgba(COLOR, PERCENTAGE_OF_OPACITY)
+    */
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      /* You start the element rotated at 180 degrees */
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+
+  /* When you hover on the [.card] element, you will affect only the element [.card__side--front] */
+  &:hover &__side--front {
+    /* Be carefoul about rotation, if you set this value to positive, you will see is rotating to the contrary sense. It gets a weird looking */
+    transform: rotateY(-180deg);
+  }
+
+  /* When you hover on the [.card] element, you will affect only the element [.card__side--back] */
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    /* When you have an image with a color background and you want to give a different effect, you add the [background-blend-mode] */
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url('../img/nat-5.jpg');
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url('../img/nat-6.jpg');
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url('../img/nat-7.jpg');
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  /* This is a new element according BEM methodology */
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    /* Having in mind you are working with a span with certain padding, [box-decoration-break] helps to clone box styling on both span sections (which are more than one if parent's width is less than total span's width */
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      /* In case you want to center a block element which parent is another block element, you must set margin */
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light;
+        }
+      }
+    }
+  }
+
+  &__call-to-action {
+    position: absolute;
+    text-align: center;
+    /*
+      In order to center a box in vertical and horizontal way, you have to
+      - Position the box as absolute (remember its parent has to be relative)
+      - Top and left postions shoud be put in 50% (at half)
+      - Add a transformation to translate (move) the element at 50% on the other way arount (X and Y axis)
+    */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}

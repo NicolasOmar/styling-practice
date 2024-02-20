@@ -14,7 +14,14 @@
   },
   "homepage": "https://github.com/NicolasOmar/styling-practice#readme",
   "scripts": {
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged -v",
+    "prettier": "prettier **/*.{html,scss} --write",
+    "prettier:check": "prettier **/*.{html,scss} --check",
+    "styles:check": "stylelint \"**/*.scss\"",
+    "setup:natorus": "cd ./1-natorus && npm i",
+    "setup:all": "npm i && npm run setup:natorus"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
@@ -23,6 +30,20 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.2.6",
     "@semantic-release/release-notes-generator": "^12.1.0",
-    "semantic-release": "^23.0.0"
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "semantic-release": "^23.0.0",
+    "stylelint": "^16.2.0",
+    "stylelint-config-standard-scss": "^13.0.0"
+  },
+  "lint-staged": {
+    "**/*.html": [
+      "prettier --write"
+    ],
+    "**/*.scss": [
+      "prettier --write",
+      "stylelint"
+    ]
   }
 }

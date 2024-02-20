@@ -1,0 +1,9 @@
+/* A mixin is a reusable piece of code that can be injected in other selectors */
+@mixin clearfix {
+  &::after {
+    /* This should be a hidden element, therefore its content is "" */
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

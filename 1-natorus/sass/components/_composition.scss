@@ -1,0 +1,49 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    /* Its position will be according a reference, its parent, which should be relative position */
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    /* [outline-offset] creates a space between the border and the outline */
+    outline-offset: 2rem;
+
+    &--p1 {
+      left: 0;
+      top: -2rem;
+    }
+
+    &--p2 {
+      right: 0;
+      top: 2rem;
+    }
+
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+    }
+
+    &:hover {
+      /* Is like a padding outside element's border */
+      outline: 1.5rem solid $color-primary;
+      /* You want to make the image bigger */
+      transform: scale(1.05);
+      /* Set a bigger and darker shadow */
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 20;
+    }
+  }
+
+  /*
+    This part is not nested because you are looking for:
+    - If you are hovering the [composition] class element
+    - And you are not hovering an element with [composition__photo] class
+    - Then you execute the css code, scale them less
+  */
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
+}

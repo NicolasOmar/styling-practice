@@ -1,0 +1,117 @@
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    /*
+      Form inputs do not use users [font-family] by default (browser's default behaviour)
+      A solution for the issue is inject the one we want by declaring to use the inherited one
+    */
+    font-family: inherit;
+    /* It happens the same for input's [color] */
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    transition: all 0.5s;
+
+    &:focus {
+      /* Setting outline to none will disable focused input's distinctive border, but it should be replaced by other option for accesibility */
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
+
+      /* [:invalid] is useful when an input has an invalid value (having the HTML logic in account) */
+      &:invalid {
+        border-bottom: 3px solid $color-secondary-dark;
+      }
+    }
+
+    /* [-webkit-input-placeholder] is a pseudo element to be used in webkit and chromiun */
+    &::-webkit-input-placeholder {
+      color: $color-grey-darker;
+    }
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+  }
+
+  /* Adjacent sibiling, you are selecting the first sibiling of the element you are selecting */
+  /* I am not including this code inside &__input because the selector will search for {form__input_label} instead of {form__label} */
+  &__input:placeholder-shown + &__label {
+    /*
+      To make a animated hidden element (on this case, input's label), you need>
+      - [opacitiy] is to set its color to none and animate it when it needs to be shown or hidden
+      - [visibility] is to avoid the element occupies space when its opacity is 0 (it cannot be animated)
+    */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+    transition: all 0.5s;
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 5rem;
+  }
+
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -0.4rem;
+    left: 0;
+
+    /* This makes reference to element's inner element */
+    &::after {
+      content: '';
+      display: block;
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      /* Its parent can have absolute position aswell, it only matters it is assigned in the code */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  /*
+    If your {__radio-input} is checked
+    Go to its first sibiling, a {__radio-label}
+    Then, go to its child, {__radio-button}
+    And to its inner element with [::after]
+  */
+  &__radio-input:checked + &__radio-label > &__radio-button::after {
+    opacity: 1;
+  }
+}

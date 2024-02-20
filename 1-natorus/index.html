@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="css/icon-font.css"
+    />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="img/favicon.png"
+    />
+
+    <title>Natours | Exciting tours for adventurous people</title>
+  </head>
+  <body>
+    <section class="navigation">
+      <input
+        type="checkbox"
+        id="navi-toggle"
+        class="navigation__checkbox"
+      />
+
+      <label
+        for="navi-toggle"
+        class="navigation__button"
+      >
+        <span class="navigation__icon"></span>
+      </label>
+
+      <!-- [&nbsp;] is used as a whitespace to avoid putting none value on the element -->
+      <section class="navigation__background">&nbsp;</section>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a
+              href="#"
+              class="navigation__link"
+            >
+              <span>01</span>
+              About Natorus
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#"
+              class="navigation__link"
+            >
+              <span>02</span>
+              Your benefits
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#"
+              class="navigation__link"
+            >
+              <span>03</span>
+              Popular tours
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#"
+              class="navigation__link"
+            >
+              <span>04</span>
+              Stories
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#"
+              class="navigation__link"
+            >
+              <span>05</span>
+              Book now
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <header class="header">
+      <section class="header__logo-box">
+        <img
+          class="header__logo"
+          src="img/logo-white.png"
+          alt="Logo"
+        />
+      </section>
+
+      <section class="header__text-box">
+        <h1 class="heading-primary">
+          <!-- span is generally used for styling text -->
+          <span class="heading-primary--main">Outdoors</span>
+          <span class="heading-primary--sub">is where life happens</span>
+        </h1>
+
+        <a
+          href="#section-tours"
+          class="btn btn--white btn--animated"
+          >Discover our tours</a
+        >
+      </section>
+    </header>
+
+    <main>
+      <section
+        class="section-about"
+        id="section-about"
+      >
+        <section class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary"
+            >Exciting tours for adventurous people</h2
+          >
+        </section>
+
+        <section class="row">
+          <section class="col-1-of-2">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              You're going to fall in love with nature
+            </h3>
+            <p class="paragraph"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+              error aliquam a dicta excepturi similique eveniet repellendus
+              dolores est debitis perspiciatis aliquid numquam voluptatibus
+              harum culpa alias, sit, nihil nobis!</p
+            >
+
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Live adventures like you never have before
+            </h3>
+            <p class="paragraph"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+              error aliquam a dicta excepturi similique eveniet repellendus
+              dolores est debitis perspiciatis aliquid numquam voluptatibus</p
+            >
+
+            <a
+              href="#popup"
+              class="btn-text"
+              >Learn more &rarr;</a
+            >
+          </section>
+
+          <section class="col-1-of-2">
+            <section class="composition">
+              <img
+                src="img/nat-1-large.jpg"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+              />
+              <img
+                src="img/nat-2-large.jpg"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                src="img/nat-3-large.jpg"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+              />
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <section
+        class="section-features"
+        id="section-features"
+      >
+        <section class="row">
+          <section class="col-1-of-4">
+            <section class="feature-box">
+              <i class="feature-box__icon icon-basic-world"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small"
+                >Explore the world</h3
+              >
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                error aliquam a dicta excepturi similique eveniet repellendus
+                dolores
+              </p>
+            </section>
+          </section>
+
+          <section class="col-1-of-4">
+            <section class="feature-box">
+              <i class="feature-box__icon icon-basic-compass"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small"
+                >Meet nature</h3
+              >
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                error aliquam a dicta excepturi similique eveniet repellendus
+                dolores
+              </p>
+            </section>
+          </section>
+
+          <section class="col-1-of-4">
+            <section class="feature-box">
+              <i class="feature-box__icon icon-basic-map"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small"
+                >Find your way</h3
+              >
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                error aliquam a dicta excepturi similique eveniet repellendus
+                dolores
+              </p>
+            </section>
+          </section>
+
+          <section class="col-1-of-4">
+            <section class="feature-box">
+              <i class="feature-box__icon icon-basic-heart"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small"
+                >Live a healthier life</h3
+              >
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                error aliquam a dicta excepturi similique eveniet repellendus
+                dolores
+              </p>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <section
+        class="section-tours"
+        id="section-tours"
+      >
+        <section class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">Most popular tours</h2>
+        </section>
+
+        <section class="row">
+          <section class="col-1-of-3">
+            <section class="card">
+              <section class="card__side card__side--front">
+                <!-- 
+                  According BEM methodology, you do not stack class names on its child elements
+                  Each block represents an independent unit and you have to modify the classes according each block
+                 -->
+                <section class="card__picture card__picture--1">
+                  &nbsp;
+                </section>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--1">
+                    the sea explorer
+                  </span>
+                </h4>
+                <section class="card__details">
+                  <ul>
+                    <li>3 day tours</li>
+                    <li>Up to 30 people</li>
+                    <li>2 tour guides</li>
+                    <li>Sleep in cozy hotels</li>
+                    <li>Difficulty: easy</li>
+                  </ul>
+                </section>
+              </section>
+              <section class="card__side card__side--back card__side--back-1">
+                <section class="card__call-to-action">
+                  <section class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">$297</p>
+                    <a
+                      href="#popup"
+                      class="btn btn--white"
+                      >Book now</a
+                    >
+                  </section>
+                </section>
+              </section>
+            </section>
+          </section>
+
+          <section class="col-1-of-3">
+            <section class="card">
+              <section class="card__side card__side--front">
+                <section class="card__picture card__picture--2">
+                  &nbsp;
+                </section>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--2">
+                    the forent hiker
+                  </span>
+                </h4>
+                <section class="card__details">
+                  <ul>
+                    <li>7 day tours</li>
+                    <li>Up to 40 people</li>
+                    <li>6 tour guides</li>
+                    <li>Sleep in provided tents</li>
+                    <li>Difficulty: medium</li>
+                  </ul>
+                </section>
+              </section>
+              <section class="card__side card__side--back card__side--back-2">
+                <section class="card__call-to-action">
+                  <section class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">$497</p>
+                    <a
+                      href="#popup"
+                      class="btn btn--white"
+                      >Book now</a
+                    >
+                  </section>
+                </section>
+              </section>
+            </section>
+          </section>
+
+          <section class="col-1-of-3">
+            <section class="card">
+              <section class="card__side card__side--front">
+                <section class="card__picture card__picture--3">
+                  &nbsp;
+                </section>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--3">
+                    the snow adventurer
+                  </span>
+                </h4>
+                <section class="card__details">
+                  <ul>
+                    <li>5 day tours</li>
+                    <li>Up to 15 people</li>
+                    <li>3 tour guides</li>
+                    <li>Sleep in provided tents</li>
+                    <li>Difficulty: hard</li>
+                  </ul>
+                </section>
+              </section>
+              <section class="card__side card__side--back card__side--back-3">
+                <section class="card__call-to-action">
+                  <section class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">$897</p>
+                    <a
+                      href="#popup"
+                      class="btn btn--white"
+                      >Book now</a
+                    >
+                  </section>
+                </section>
+              </section>
+            </section>
+          </section>
+        </section>
+
+        <section class="u-center-text u-margin-bottom-big u-margin-top-huge">
+          <a
+            href="#section-tours"
+            class="btn btn--green"
+            >Discover all tours</a
+          >
+        </section>
+      </section>
+
+      <section
+        class="section-stories"
+        id="section-stories"
+      >
+        <section class="bg-video">
+          <!--
+            For video tags
+            put [autoplay] will start the media at start
+            put [muted] to watch it without sound
+            put [loop] re-watch it without manual work
+          -->
+          <video
+            class="bg-video__content"
+            autoplay
+            muted
+            loop
+          >
+            <source
+              src="img/video.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="img/video.webm"
+              type="video/webm"
+            />
+            <!--
+              In case you want to include several videos (which are the same, but using different formats)
+              You should include a list of sources in priority order to indicate which should be the first in be shown
+              In case user's browser does not support any of the formats in the list
+              You will show a legend to indicate that situation
+            -->
+            Your browser does not support this video!
+          </video>
+        </section>
+
+        <section class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">We make people genuinely happy</h2>
+        </section>
+
+        <section class="row">
+          <section class="story">
+            <figure class="story__shape">
+              <img
+                src="img/nat-8.jpg"
+                alt="Person on a tour"
+                class="story__img"
+              />
+              <figcaption class="story__caption">Mary Smith</figcaption>
+            </figure>
+
+            <section class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small"
+                >I had the best weekend ever with my family</h3
+              >
+              <p
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                aliquid perferendis neque, fuga, sint quis eligendi voluptates
+                consequuntur dolore nam quos? Accusamus facilis culpa laudantium
+                veniam mollitia recusandae repudiandae aperiam.</p
+              >
+            </section>
+          </section>
+        </section>
+
+        <section class="row">
+          <section class="story">
+            <figure class="story__shape">
+              <img
+                src="img/nat-9.jpg"
+                alt="Person on a tour"
+                class="story__img"
+              />
+              <figcaption class="story__caption">Jack Wilson</figcaption>
+            </figure>
+
+            <section class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small"
+                >WOW! My life is completely different now</h3
+              >
+              <p
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                aliquid perferendis neque, fuga, sint quis eligendi voluptates
+                consequuntur dolore nam quos? Accusamus facilis culpa laudantium
+                veniam mollitia recusandae repudiandae aperiam.</p
+              >
+            </section>
+          </section>
+        </section>
+
+        <section class="u-center-text u-margin-top-huge">
+          <a
+            href="#"
+            class="btn-text"
+            >Read all stories &rarr;</a
+          >
+        </section>
+      </section>
+
+      <section
+        class="section-book"
+        id="section-book"
+      >
+        <section class="row">
+          <section class="book">
+            <section class="book__form">
+              <form
+                action="#"
+                class="form"
+              >
+                <section class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Start booking now</h2>
+                </section>
+
+                <section class="form__group">
+                  <!-- To link an <input> and a <label>, label's [for] and input's [id] value should be the same -->
+                  <input
+                    type="text"
+                    id="name"
+                    class="form__input"
+                    placeholder="Full Name"
+                    required
+                  />
+                  <label
+                    for="name"
+                    class="form__label"
+                    >Full Name</label
+                  >
+                </section>
+
+                <section class="form__group">
+                  <input
+                    type="email"
+                    id="email"
+                    class="form__input"
+                    placeholder="Email Address"
+                    required
+                  />
+                  <label
+                    for="email"
+                    class="form__label"
+                    >Email Address</label
+                  >
+                </section>
+
+                <section class="form__group u-margin-bottom-medium">
+                  <!-- For <radio> inputs, the group should have the same [name] value -->
+                  <section class="form__radio-group">
+                    <!--
+                      It is not possible to style an <radio> input
+                      Therefore you have to take an alternative
+                    -->
+                    <input
+                      type="radio"
+                      name="size"
+                      id="small"
+                      class="form__radio-input"
+                    />
+                    <label
+                      for="small"
+                      class="form__radio-label"
+                    >
+                      <!-- The <span> will be used as the button because its parent label will select the input because is bounded to it -->
+                      <span class="form__radio-button"></span>
+                      Small tour group
+                    </label>
+                  </section>
+
+                  <section class="form__radio-group">
+                    <input
+                      type="radio"
+                      name="size"
+                      id="large"
+                      class="form__radio-input"
+                    />
+                    <label
+                      for="large"
+                      class="form__radio-label"
+                    >
+                      <span class="form__radio-button"></span>
+                      Large tour group
+                    </label>
+                  </section>
+                </section>
+
+                <section class="form__group">
+                  <button
+                    type="submit"
+                    class="btn btn--green"
+                    >Next Step &rarr;</button
+                  >
+                </section>
+              </form>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <!-- This section will be here as an example only, it has been used to build a grid system -->
+      <!--
+        <section class="grid-test">
+          <section class="row">
+            <section class="col-1-of-2">Col 1 of 2</section>
+            <section class="col-1-of-2">Col 1 of 2</section>
+          </section>
+
+          <section class="row">
+            <section class="col-1-of-3">Col 1 of 3</section>
+            <section class="col-1-of-3">Col 1 of 3</section>
+            <section class="col-1-of-3">Col 1 of 3</section>
+          </section>
+
+          <section class="row">
+            <section class="col-1-of-3">Col 1 of 3</section>
+            <section class="col-2-of-3">Col 2 of 3</section>
+          </section>
+
+          <section class="row">
+            <section class="col-1-of-4">Col 1 of 4</section>
+            <section class="col-1-of-4">Col 1 of 4</section>
+            <section class="col-1-of-4">Col 1 of 4</section>
+            <section class="col-1-of-4">Col 1 of 4</section>
+          </section>
+
+          <section class="row">
+            <section class="col-1-of-4">Col 1 of 4</section>
+            <section class="col-3-of-4">Col 3 of 4</section>
+          </section>
+        </section>
+      -->
+    </main>
+
+    <footer class="footer">
+      <section class="footer__logo-box">
+        <img
+          src="img/logo-green-2x.png"
+          alt="Full logo"
+          class="footer__logo"
+        />
+      </section>
+
+      <section class="row">
+        <section class="col-1-of-2">
+          <section class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a
+                  href="#"
+                  class="footer__link"
+                  >Company</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#"
+                  class="footer__link"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#"
+                  class="footer__link"
+                  >Careers</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#"
+                  class="footer__link"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#"
+                  class="footer__link"
+                  >Terms</a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section class="col-1-of-2">
+          <section class="footer__copyright">
+            Built my
+            <a
+              href="#"
+              class="footer__link"
+              >Jonas Schmedtmann</a
+            >
+            for his online course
+            <a
+              href="#"
+              class="footer__link"
+              >Advanced CSS and SASS</a
+            >. Copyrighy &copy; by Jonas Schmedtmann. You are allowed to use
+            this webpage for both personal and commercial use, but not to claim
+            it as your own design. A credit to the original author, Jonas
+            Schmedtmann, is of course highly appreciated.
+          </section>
+        </section>
+      </section>
+    </footer>
+
+    <section
+      class="popup"
+      id="popup"
+    >
+      <section class="popup__content">
+        <section class="popup__left">
+          <img
+            src="img/nat-8.jpg"
+            alt="Tour photo"
+            class="popup__img"
+          />
+          <img
+            src="img/nat-9.jpg"
+            alt="Tour photo"
+            class="popup__img"
+          />
+        </section>
+
+        <section class="popup__right">
+          <a
+            href="#section-tours"
+            class="popup__close"
+            >&times;</a
+          >
+          <h2 class="heading-secondary u-margin-bottom-small"
+            >Start booking now</h2
+          >
+          <h3 class="heading-tertiary u-margin-bottom-small"
+            >Important &ndash; Please read there terms before booking</h3
+          >
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+            mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+            semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+            nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+            nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem
+            neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+            hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
+            Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+            fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
+            consequat, leo eget bibendum sodales, augue velit cursus nunc.
+          </p>
+          <a
+            href="#"
+            class="btn btn--green"
+            >Book now</a
+          >
+        </section>
+      </section>
+    </section>
+  </body>
+</html>

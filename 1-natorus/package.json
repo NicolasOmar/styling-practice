@@ -1,0 +1,15 @@
+{
+  "name": "1-natorus",
+  "version": "1.0.0",
+  "author": "Nicolás Omar González Passerino",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "npm run compile && npm run watch",
+    "compile": "node-sass sass/main.scss css/style.css --output-style=compressed",
+    "watch": "npm run compile -- -w"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
