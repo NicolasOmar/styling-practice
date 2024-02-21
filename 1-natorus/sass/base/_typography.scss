@@ -32,6 +32,11 @@ body {
     /* animation-iteration-count: 2; */
     /* You can add all mentioned properties with animation */
     /* animation: move-in-left 1s; */
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-family: 5rem;
+    }
   }
 
   &--sub {
@@ -41,6 +46,11 @@ body {
     letter-spacing: 1.75rem;
     animation-name: move-in-right;
     animation-duration: 2s;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      font-family: 5rem;
+    }
   }
 }
 
@@ -61,6 +71,14 @@ body {
   letter-spacing: 2px;
   /* When a transformation takes effect, transition sets how it will looks at users eyes */
   transition: all 0.2s;
+
+  @include respond(tab-portail) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg);

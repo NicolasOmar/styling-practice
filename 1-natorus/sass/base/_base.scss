@@ -42,4 +42,8 @@ html {
 
 body {
   box-sizing: border-box;
+
+  @include respond(tab-portail) {
+    padding: 0;
+  }
 }
