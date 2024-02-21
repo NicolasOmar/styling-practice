@@ -14,6 +14,30 @@ html {
     To achieve the 10px proposed before, you divide 10 by 16
   */
   font-size: 62.5%;
+
+  /*
+    For a simple mixing implementation, your sintaxis will look like this
+    Now, {font-size: 50%} will be mixin's @content
+  */
+  /*
+    @include respond-phone {
+      font-size: 50%;
+    }
+  */
+
+  /* For a selectable mixing implementation (the case using @if directive), your sintaxis will look like this */
+  @include respond(tab-landscape) {
+    font-size: 56.25%; /* 1rem = 9px, 9/16 = 56.25% */
+  }
+
+  /* On this scenario, you can have conflicting rules between media queries, so to solve it is recommended to follow code order, last position is more important than the others */
+  @include respond(tab-portail) {
+    font-size: 50%; /* 1rem = 8px, 8/16 = 50% */
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; /* 1rem = 12px, 12/16 = 75% */
+  }
 }
 
 body {

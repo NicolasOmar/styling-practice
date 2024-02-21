@@ -6,6 +6,7 @@
     "color-function-notation": "legacy",
     "font-family-name-quotes": "always-where-required",
     "selector-class-pattern": "[a-z]+[__]?[a-z]+[--]?[a-z]+",
-    "import-notation": "string"
+    "import-notation": "string",
+    "media-feature-range-notation": "prefix"
   }
 }
