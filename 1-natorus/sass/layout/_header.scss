@@ -6,7 +6,7 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url('../img/hero.jpg');
+    url('../img/hero-small.jpg');
   /* Fit the element to screen's width */
   background-size: cover;
   /* Ensure the background will be on page's top */
@@ -17,6 +17,19 @@
   */
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   position: relative;
+
+  /*
+    A way to integrate responsive images in CSS is using multiple @media comparissons
+    In this case, if the browser has a minimun resolution of X and a minimun width of Y, it will be rendered a bigger image (with more definition)
+  */
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url('../img/hero.jpg');
+  }
 
   @include respond(phone) {
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);

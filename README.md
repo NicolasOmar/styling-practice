@@ -81,6 +81,7 @@ npm run setup:all
   - How to format a long text into several columns using properties like `column-count`, `column-gap` and `column-rule`.
   - Learning concepts related to mobile-first responsive strategy.
   - Implement a responsive strategy using `@media` queries and extend its functionality using `@if` directive.
+  - How to work with responsive images using properties like `srcset` and `sizes`.
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).

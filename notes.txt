@@ -117,3 +117,11 @@ Responsive design
     perfect way
       ignore devices, focus on content
       you start at the smaller break and when contents displays wrongly, start working on a new break
+  responsive images
+    use cases
+      resolution switching: decrease image resolution in smaller screen
+      density switching: decrease phisical pixels in the image
+      art direction: different image for a smaller screen
+  other points
+    Does not exists hover on touch devices (could be obvious, but is good to remember it)
+    dpi: Dots per inch, a resolution messurament more used in Apple devices (retina display)
