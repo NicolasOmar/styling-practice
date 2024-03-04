@@ -125,3 +125,11 @@ Responsive design
   other points
     Does not exists hover on touch devices (could be obvious, but is good to remember it)
     dpi: Dots per inch, a resolution messurament more used in Apple devices (retina display)
+
+Flexbox
+  Module of css3
+  gives the container the ability to expand and shrink elements to best use all available space
+  concepts
+    items, the elements
+    container, the box around ints elements
+    

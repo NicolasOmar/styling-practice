@@ -1,8 +1,7 @@
 {
-  "name": "1-natorus",
+  "name": "2-trillo",
   "version": "1.0.0",
-  "author": "Nicolás Omar González Passerino",
-  "license": "ISC",
+  "description": "Landing page for natours",
   "private": false,
   "scripts": {
     "start": "npm run compile && npm run watch",

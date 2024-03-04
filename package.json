@@ -21,7 +21,8 @@
     "prettier:check": "prettier **/*.{html,scss} --check",
     "styles:check": "stylelint \"**/*.scss\"",
     "setup:natorus": "cd ./1-natorus && npm i",
-    "setup:all": "npm i && npm run setup:natorus"
+    "setup:trillo": "cd ./2-trillo && npm i",
+    "setup:all": "npm i && npm run setup:natorus && npm run setup:trillo"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
