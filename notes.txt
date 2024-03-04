@@ -36,7 +36,7 @@ build
       element: part of a block that has no standalone meaning
       modifier: different version og a block or an element
 
-architect
+architecture
   smacs
   logical file and folder structure
   7-1 pattern
@@ -125,6 +125,11 @@ Responsive design
   other points
     Does not exists hover on touch devices (could be obvious, but is good to remember it)
     dpi: Dots per inch, a resolution messurament more used in Apple devices (retina display)
+
+CSS-variables
+  no need of preprocessor
+  can be maniplated in JS
+  can be inherited
 
 Flexbox
   Module of css3
