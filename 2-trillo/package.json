@@ -1,7 +1,7 @@
 {
   "name": "2-trillo",
   "version": "1.0.0",
-  "description": "Landing page for natours",
+  "description": "Landing page for trillo",
   "private": false,
   "scripts": {
     "start": "npm run compile && npm run watch",

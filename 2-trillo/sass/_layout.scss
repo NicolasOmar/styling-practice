@@ -1,1 +1,33 @@
-/* Here goes the layout */
+.container {
+  max-width: 120rem; /* 1200 px */
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+}
+
+.header {
+  height: 7rem;
+  background-color: var(--color-white);
+  border-bottom: var(--color-grey-light-1);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  /*
+    First argument is to avoid expand beyond its max width
+    Second argument is to avoid shrink its when it has not reached its max width
+    Third argument is to fix its width
+  */
+  flex: 0 0 18%;
+}
+
+.hotel-view {
+  background-color: var(--color-white);
+  /* By setting flex's first argument to 1, it will grow as much as it can */
+  flex: 1;
+}
