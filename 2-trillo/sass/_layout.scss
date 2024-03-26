@@ -7,9 +7,16 @@
 }
 
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: var(--color-white);
   border-bottom: var(--color-grey-light-1);
+  /* To use flex capabilities, first you have to add the [display: flex] statement */
+  display: flex;
+  /* To add space between a flex container elements, you can use the [justify-content] property */
+  justify-content: space-between;
+  /* To set elements alignment, you can use the [align-items] property */
+  align-items: center;
 }
 
 .content {

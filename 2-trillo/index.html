@@ -25,10 +25,61 @@
   </head>
   <body>
     <section class="container">
-      <header class="header"> Header part </header>
+      <header class="header">
+        <img
+          src="img/logo.png"
+          alt="Trillo logo"
+          class="logo"
+        />
+
+        <form
+          action="#"
+          class="search"
+        >
+          <input
+            type="search"
+            class="search__input"
+            placeholder="Search hotels"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+
+        <nav class="user-nav">
+          <section class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <!--
+                A way to use an svg as an icon is to add the svg and inside it, an <use> tag
+                That use tag needs a specific href which includes the svg base, then an numeral and the svg name at the end
+                After using that, you can adjust svg's color among other properties
+              -->
+              <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+            </svg>
+            <span class="user-nav__notification">7</span>
+          </section>
+
+          <section class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-chat"></use>
+            </svg>
+            <span class="user-nav__notification">13</span>
+          </section>
+
+          <section class="user-nav__user">
+            <img
+              src="img/user.jpg"
+              alt="User photo"
+              class="user-nav__user-photo"
+            />
+            <span class="user-nav__user-name">Jonas</span>
+          </section>
+        </nav>
+      </header>
       <section class="content">
         <nav class="sidebar"> Navigation </nav>
-
         <main class="hotel-view"> Hotel view </main>
       </section>
     </section>
