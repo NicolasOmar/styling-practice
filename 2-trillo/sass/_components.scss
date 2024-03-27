@@ -4,7 +4,7 @@
   margin-left: 2rem;
 }
 
-/* SEARCG */
+/* SEARCH */
 .search {
   flex: 0 0 40%;
   display: flex;
@@ -124,4 +124,76 @@
 
     }
   */
+}
+
+/* SIDE NAVIGATION */
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* Same height that its reffered element (__item) */
+      height: 100%;
+      width: 0.3rem;
+      background-color: var(--color-primary);
+      transform: scaleY(0);
+      /* In [transition] you can set different timings for different properties */
+      transition:
+        transform 0.2s,
+        width 0.4s,
+        background-color 0.1s;
+    }
+
+    &:hover::before {
+      transform: scaleY(1);
+      width: 100%;
+    }
+
+    &:active::before {
+      background-color: var(--color-primary-light);
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: var(--color-grey-light-1);
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1.5rem 3rem;
+      /* [z-index] will work if the element sets its position in the code */
+      z-index: 10;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    /* {currentColor} uses the color of the current element or its parent */
+    fill: currentColor;
+  }
+}
+
+/* LEGAL */
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--color-grey-light-4);
 }

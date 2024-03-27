@@ -25,12 +25,19 @@
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
+  height: 100vh;
+  display: flex;
   /*
     First argument is to avoid expand beyond its max width
     Second argument is to avoid shrink its when it has not reached its max width
     Third argument is to fix its width
   */
   flex: 0 0 18%;
+  justify-content: space-between;
+  /*
+    To adjust [justify-content: space-between] in vertical way, we will have to add [flex-direction] in {column} value
+  */
+  flex-direction: column;
 }
 
 .hotel-view {

@@ -7,6 +7,10 @@
     "font-family-name-quotes": "always-where-required",
     "selector-class-pattern": "[a-z]+[__]?[a-z]+[--]?[a-z]+",
     "import-notation": "string",
-    "media-feature-range-notation": "prefix"
+    "media-feature-range-notation": "prefix",
+    "value-keyword-case": [
+      "lower",
+      { "ignoreProperties": ["fill"] }
+    ]
   }
 }
