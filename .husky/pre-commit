@@ -3,3 +3,4 @@
 
 npm run lint-staged
 git add 1-natorus/css/style.css
+git add 2-trillo/css/style.css

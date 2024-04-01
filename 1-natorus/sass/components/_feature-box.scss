@@ -7,6 +7,10 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   transition: all 0.5s;
 
+  @include respond(tab-portail) {
+    padding: 2rem;
+  }
+
   &__icon {
     /* Is an icon that uses font, so we use font properties */
     font-size: 6rem;

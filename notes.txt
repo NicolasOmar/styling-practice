@@ -36,7 +36,7 @@ build
       element: part of a block that has no standalone meaning
       modifier: different version og a block or an element
 
-architect
+architecture
   smacs
   logical file and folder structure
   7-1 pattern
@@ -85,3 +85,56 @@ Responsive
     [in 3rd exercise] > css used for 2-dimensional rows
 
   utility classes
+
+Responsive design
+  strategies
+    desktop-first
+      start writing css for the desktop/large screens
+      then use media queries to shrink design to smaller screens
+    mobile-first
+      start writing css for mobile devices
+      inverse strategy than first one
+      force us to reduce websites to the absolute essentials
+      pros
+        optimized for mobile
+        focused on abosulte essentials
+        result in smaller products
+        prioritizes content over aesthetic
+      cons
+        desktop version feels empty and simplistic
+        more difficult to develop
+        clients are used to see dektop version of site
+      think about what is the purpose of your website
+  max-width and min
+    media queires do not add any importance or specificity to selectors
+    to solve any issue related to that, put them at the end
+  breakpoints
+    bad way
+      develop for a specific set of devices
+      no futuer proof
+    good way
+      group devices in a logical way and set your breakpoints based on them
+    perfect way
+      ignore devices, focus on content
+      you start at the smaller break and when contents displays wrongly, start working on a new break
+  responsive images
+    use cases
+      resolution switching: decrease image resolution in smaller screen
+      density switching: decrease phisical pixels in the image
+      art direction: different image for a smaller screen
+  other points
+    Does not exists hover on touch devices (could be obvious, but is good to remember it)
+    dpi: Dots per inch, a resolution messurament more used in Apple devices (retina display)
+
+CSS-variables
+  no need of preprocessor
+  can be maniplated in JS
+  can be inherited
+
+Flexbox
+  Module of css3
+  gives the container the ability to expand and shrink elements to best use all available space
+  concepts
+    items, the elements
+    container, the box around ints elements
+    

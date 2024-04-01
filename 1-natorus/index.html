@@ -162,17 +162,42 @@
 
           <section class="col-1-of-2">
             <section class="composition">
+              <!--
+                On this case, instead using pixel density, you are providing image's width (with w)
+                But you need to include also sizes, which is a list of image size's related to each breakpoint
+                First, you have to provide the breakpoints with its relative size (change % by vw, is the same value type)
+                At last, put the relative size in px as default value in case screen's viewport is beyond those breakpoints you listed before
+                To have in mind, you are still including a src attribute in case user's browser is an older one and you need to maintain certain compatibility
+              -->
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="
+                  (max-width: 900px) 20vw,
+                  (max-width: 600px) 30vw,
+                  300px
+                "
                 src="img/nat-1-large.jpg"
                 alt="Photo 1"
                 class="composition__photo composition__photo--p1"
               />
               <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="
+                  (max-width: 900px) 20vw,
+                  (max-width: 600px) 30vw,
+                  300px
+                "
                 src="img/nat-2-large.jpg"
                 alt="Photo 2"
                 class="composition__photo composition__photo--p2"
               />
               <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="
+                  (max-width: 900px) 20vw,
+                  (max-width: 600px) 30vw,
+                  300px
+                "
                 src="img/nat-3-large.jpg"
                 alt="Photo 3"
                 class="composition__photo composition__photo--p3"
@@ -612,11 +637,32 @@
 
     <footer class="footer">
       <section class="footer__logo-box">
-        <img
-          src="img/logo-green-2x.png"
-          alt="Full logo"
-          class="footer__logo"
-        />
+        <picture class="footer__logo">
+          <!--
+            In case our screen has the mentioned max-width, use this source
+            If not, use the image provided below
+          -->
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <!--
+            In [srcset] property, you are giving a list of images with its related x
+            The browser will look into that list and decide the best option giving user's screen size for a more optimized download
+              1x for low resolution in small screens
+              2x for high resolution in bigger screens
+            This is a density switching implementation
+          -->
+          <img
+            srcset="img/logo-green-1x-png 1x, img/logo-green-2x.png 2x"
+            src="img/logo-green-2x.png"
+            alt="Full logo"
+            class="footer__logo"
+          />
+        </picture>
       </section>
 
       <section class="row">

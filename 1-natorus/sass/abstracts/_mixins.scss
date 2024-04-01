@@ -7,3 +7,53 @@
     clear: both;
   }
 }
+
+/* To pass the code from the place will be the mixin called, you need to include @content as part of the mixin itself */
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+/*
+  Having in mind you are working on a desktop-first strategy
+  * 0-600px: Phone
+  * 600-900px: Tablet in portrait
+  * 900-1200px: Tablet in landscape
+  * 1200-1800px: Normal styles apply
+  * 1800px+: Big desktop
+*/
+/*
+  For a more advanced way to implement mixings, you can use the [@if] directive
+  @if will check if an argument is equal to N value, it will execute the code you have written
+  Ems and rems are not affected by root font-size (on body) on media queries, they are affected to the font-size of the browser
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    /* Equals 600px */
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-portail {
+    /* Equals 900px */
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-landscape {
+    /* Equals 1200px */
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    /* Equals 1800px */
+    @media (max-width: 112.5em) {
+      @content;
+    }
+  }
+}
