@@ -1,3 +1,26 @@
+# [2.0.0](https://github.com/NicolasOmar/styling-practice/compare/v1.0.0...v2.0.0) (2024-04-01)
+
+
+### Bug Fixes
+
+* How to add a svg element in html and in css ([6bbf8b7](https://github.com/NicolasOmar/styling-practice/commit/6bbf8b7fab9918a4aff76ff0365cb23deab491aa))
+* How to add and use custom css properties ([90057fc](https://github.com/NicolasOmar/styling-practice/commit/90057fc7250eec21360f509df5ddf85ef97c0d1a))
+* How to adjust element orientation with flex-direction ([368fd61](https://github.com/NicolasOmar/styling-practice/commit/368fd6173c18d5c48a8c6532b0d29eb71cb6bdda))
+* How to use flex starter properties like justify- and align- ([09603aa](https://github.com/NicolasOmar/styling-practice/commit/09603aaf598324a844d27563f1285973e0d2d44e))
+* How to use flex to adjust layout elements width ([4d6fa80](https://github.com/NicolasOmar/styling-practice/commit/4d6fa80a035fcda09c65724a54766736f6e16f8c))
+* How to work with responsive images using properties like srcset and sizes ([a03ba27](https://github.com/NicolasOmar/styling-practice/commit/a03ba27cafb254cbec2c38b6e94cfd0ed5bcdf53))
+* Learning concepts related to mobile-first responsive strategy and implement it with [@media](https://github.com/media) queries and [@if](https://github.com/if) directive ([97bff9a](https://github.com/NicolasOmar/styling-practice/commit/97bff9a2c90c0fd30ee9ceef3b9a6cc7fe717f09))
+
+
+### Features
+
+* Exercise [#2](https://github.com/NicolasOmar/styling-practice/issues/2). Trillo project ([5cfceea](https://github.com/NicolasOmar/styling-practice/commit/5cfceea18f6921a0dbf83bc8fd704104bd0d1608))
+
+
+### BREAKING CHANGES
+
+* New exercise added. Folder structure improved
+
 # 1.0.0 (2024-2-20)
 
 
