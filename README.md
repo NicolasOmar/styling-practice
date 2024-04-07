@@ -84,12 +84,13 @@ npm run setup:all
   - How to work with responsive images using properties like `srcset` and `sizes`.
 - Trillo project (`2-trillo` folder)
   - How to add and use `custom css properties`.
-  - How to use `flex` to adjust layout elements width.
+  - How to use `flex` to adjust layout elements width with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
   - How to use flex starter properties like `justify-` and `align-`.
   - How to adjust element orientation with `flex-direction`.
   - How to add a `svg` element in html and in css.
   - How to use [HTML entities](https://css-tricks.com/snippets/html/glyphs/) in both HTML and CSS implementations.
 - Nexter project (`3-nexter` folder)
+  - How to use `grid` to adjust layout elements with [gird layouts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
