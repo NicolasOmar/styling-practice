@@ -34,9 +34,23 @@ body {
 .container {
   display: grid;
   /*
-    - Each argument in grid-template rows (also applicable to other properties is separated by spaces)
-    - [min-content] default value is {auto}
-    - In case you have a repetitive value, you can et repeat([number_of_time], [setter_value])
+    - Each argument in [grid-template-rows] (also applicable to other properties) is separated by spaces)
+    - [min-content] sets element's specific size (on width or heigth) on its own content, its default value is {auto}
+    - In case you have a repetitive value, you can use repeat([number_of_time], [setter_value])
   */
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  /*
+    - {fr} represetnts a fractional unit, which equals to remainig screen size (in width or height) space (1 is the total, 2 is double, 0.5 is half and so on)
+    - On this case, you are repeating the columns on 8, each one of them will have a width of 1 fractional unit (in width) but a fraction of 8.
+  */
+  /* grid-template-columns: repeat(8, 1fr); */
+  /*
+    - [minmax] is a function where you set element's minimun and maximun size (reduces certain logic for grid column's size)
+    - [grid-template-columns] tracks width are also separated by spaces
+      - first column will have 8rem (equals 80px)
+      - second one will use 1 fractional unit (of the remainig space not fill by other columns
+      - from the third to the tenth, those will have a minimun of its content and a maximun of 14rem (equals 140px)
+      - and last one will use the other 1 fractional unit (of the remainig space not fill by other columns
+  */
+  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
 }

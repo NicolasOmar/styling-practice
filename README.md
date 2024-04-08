@@ -91,6 +91,9 @@ npm run setup:all
   - How to use [HTML entities](https://css-tricks.com/snippets/html/glyphs/) in both HTML and CSS implementations.
 - Nexter project (`3-nexter` folder)
   - How to use `grid` to adjust layout elements with [gird layouts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
+  - How to use adjust grid's structure using `grid-template-rows` and `grid-template-columns`.
+  - How to reduce repetitive values with `repeat`.
+  - How to adjust element's content space with `fr`, `vh`, `vw` and `min-content`.
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
