@@ -95,8 +95,9 @@ npm run setup:all
   - How to reduce repetitive values with `repeat`.
   - How to adjust element's content space with `fr`, `vh`, `vw` and `min-content`.
   - How to make grid layout easier by including area names on columns.
-  - Handle 2-level grids (one inside another).
+  - Handle multiple-level grids (one inside another).
   - How to set gaps between columns and/or rows using `column-gap` and `row-gap`.
+  - How to make a layout responsive ready without using media queries.
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
