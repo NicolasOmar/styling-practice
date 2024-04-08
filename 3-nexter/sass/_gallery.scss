@@ -1,3 +1,9 @@
 .gallery {
   background-color: $color-grey-dark-1;
+  /*
+    [grid-column] value is setted like this
+      grid-column: [in_which_column_part_will_start] / [in_which_column_part_will_end]
+    Doing it like this makes code more readable to new users (having the name asignations at hand)
+  */
+  grid-column: full-start / full-end;
 }

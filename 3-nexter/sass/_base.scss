@@ -52,5 +52,17 @@ body {
       - from the third to the tenth, those will have a minimun of its content and a maximun of 14rem (equals 140px)
       - and last one will use the other 1 fractional unit (of the remainig space not fill by other columns
   */
-  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+  /*
+    - A thing to have in mind in this sintaxis is that grid columns (as well as its rows) can have names with the following sintaxis
+      [column_start_name] {column_size_value} [column_end_name]
+    - Doing this assignation helps to code maintment
+    - You can see its implementation on secion's [grid-column] values
+    - On cases like the {8rem} and {minmax(6rem, 1fr)}, the sintaxis is pretty clear, but for the repeat part, you are setting on each generated column a name set which will be used (assign the section to certan column start or end) by adding column's number after the name (for example, col-start 6 / col-end 7)
+  */
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start]
+    minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end]
+    minmax(6rem, 1fr) [full-end];
 }

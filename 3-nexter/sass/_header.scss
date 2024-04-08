@@ -1,3 +1,10 @@
 .header {
   background-color: $color-grey-dark-1;
+  /*
+    [grid-column] value is setted like this
+      grid-column: [in_which_column_part_will_start] / [in_which_column_part_will_end]
+    Doing it like this makes code more readable to new users (having the name asignations at hand)
+    - On this particular case, you can see that the header will be starting at sidebar-end and to the end of the sixth column (which has been created in the repeat code). This is the way repeated columns can be called in the grid layout
+  */
+  grid-column: full-start / col-end 6;
 }

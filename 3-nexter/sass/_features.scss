@@ -1,3 +1,9 @@
 .features {
   background-color: $color-grey-light-2;
+  /*
+    [grid-column] value is setted like this
+      grid-column: [in_which_column_part_will_start] / [in_which_column_part_will_end]
+    Doing it like this makes code more readable to new users (having the name asignations at hand)
+  */
+  grid-column: center-start / center-end;
 }

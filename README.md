@@ -94,6 +94,7 @@ npm run setup:all
   - How to use adjust grid's structure using `grid-template-rows` and `grid-template-columns`.
   - How to reduce repetitive values with `repeat`.
   - How to adjust element's content space with `fr`, `vh`, `vw` and `min-content`.
+  - How to make grid layout easier by including area names on columns.
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
