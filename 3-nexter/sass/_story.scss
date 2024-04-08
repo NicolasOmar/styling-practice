@@ -2,15 +2,37 @@
   &__picture {
     background-color: $color-primary;
     /*
-    [grid-column] value is setted like this
-      grid-column: [in_which_column_part_will_start] / [in_which_column_part_will_end]
-    Doing it like this makes code more readable to new users (having the name asignations at hand)
-  */
+      [grid-column] value is setted like this
+        grid-column: [in_which_column_part_will_start] / [in_which_column_part_will_end]
+      Doing it like this makes code more readable to new users (having the name asignations at hand)
+    */
     grid-column: full-start / col-end 4;
   }
 
   &__content {
     background-color: $color-grey-light-1;
     grid-column: col-start 5 / full-end;
+    /* Is adviced to use vw (viewport units) to adjust containers using viewport point of view and avoiding positioning problems on responsive layouts */
+    padding: 6rem 8vw;
+    /*
+      - The code below is to give example you can mix grid and flex layouts if is needed
+      - Is adviced to use in one-dimensional layouts
+    */
+    /*
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    */
+    /* The same implementation using grid goes like this */
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
   }
 }
