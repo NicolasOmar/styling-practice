@@ -100,7 +100,8 @@ npm run setup:all
   - How to make a layout responsive ready without using media queries.
   - How to use flexbox and grid at the same time (for one-dimensional layouts).
   - How to supperpose different elements located in the same row or column.
-  - How to create a gallery effect by setting `object-fit` to its images
+  - How to create a gallery effect by setting `object-fit` to its images.
+  - How to align several elements in vertical way (besides the already worked horizontal cases).
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
