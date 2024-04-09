@@ -6,4 +6,42 @@
     Doing it like this makes code more readable to new users (having the name asignations at hand)
   */
   grid-column: full-start / full-end;
+  padding: 8rem;
+
+  .nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 2rem;
+    align-items: center;
+
+    &__link:link,
+    &__link:visited {
+      font-size: 1.4rem;
+      color: $color-white;
+      text-decoration: none;
+      font-family: $font-display;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1.5rem;
+      display: block;
+      transition: all 0.2s;
+
+      &:hover,
+      &:active {
+        background-color: rgba($color-black, 0.05);
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+.copyright {
+  font-size: 1.6rem;
+  color: $color-grey-light-2;
+  margin-top: 6rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 70%;
 }
