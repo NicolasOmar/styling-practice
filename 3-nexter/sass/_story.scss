@@ -23,7 +23,7 @@
       width: 100%;
       grid-row: 2 / span 4;
       grid-column: 2 / span 4;
-      box-shadow: 0 2rem 5rem rgba(#000, 0.1);
+      box-shadow: 0 2rem 5rem rgba($color-black, 0.1);
     }
 
     &--2 {
@@ -34,7 +34,7 @@
       width: 115%;
       grid-row: 4 / 6;
       grid-column: 4 / 7;
-      box-shadow: 0 2rem 5rem rgba(#000, 0.1);
+      box-shadow: 0 2rem 5rem rgba($color-black, 0.1);
       z-index: 10;
     }
   }
