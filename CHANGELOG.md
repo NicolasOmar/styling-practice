@@ -1,3 +1,29 @@
+# [3.0.0](https://github.com/NicolasOmar/styling-practice/compare/v2.0.0...v3.0.0) (2024-04-10)
+
+
+### Bug Fixes
+
+* Added [@support](https://github.com/support) to overlap functionalities in older browsers ([eddea85](https://github.com/NicolasOmar/styling-practice/commit/eddea8514d43a999a3942eade89786042506a5d1))
+* Adding grid-layout way to make site responsive ([1b0767d](https://github.com/NicolasOmar/styling-practice/commit/1b0767df0862f96b918b59a4bd2baf13ea915c7d))
+* How to align several elements in vertical way (besides the already worked horizontal cases) ([bba6faa](https://github.com/NicolasOmar/styling-practice/commit/bba6faa5c382b0fd7ea738e2aa661720042908a9))
+* How to create a gallery effect by setting object-fit to its images ([5bf5592](https://github.com/NicolasOmar/styling-practice/commit/5bf5592674f3253e0ba8b86859738b0c47ca1524))
+* How to make a layout responsive ready without using media queries ([f4d540c](https://github.com/NicolasOmar/styling-practice/commit/f4d540c2747bad1fa2780920c8e78088ac9ea92a))
+* How to make grid layout easier by including area names on columns ([875e45c](https://github.com/NicolasOmar/styling-practice/commit/875e45c2a56c04770e916070ab58e66de1cb4418))
+* How to set gaps between columns and/or rows using column-gap and row-gap ([dd830ac](https://github.com/NicolasOmar/styling-practice/commit/dd830aca58f6c4062a12d6d2a550c11db23844d4))
+* How to supperpose different elements located in the same row or column ([fb21b21](https://github.com/NicolasOmar/styling-practice/commit/fb21b2120c9785bf522a1edf73721704450be360))
+* How to use adjust grid's structure using grid-template-rows and grid-template-columns ([808eb67](https://github.com/NicolasOmar/styling-practice/commit/808eb676266d24c1d586995b4ade8f8e6ec35347))
+* How to use flexbox and grid at the same time (for one-dimensional layouts) ([e6f4932](https://github.com/NicolasOmar/styling-practice/commit/e6f4932e265cc14d74dfe93e8b5deb95f099ae9b))
+
+
+### Features
+
+* Exercise [#3](https://github.com/NicolasOmar/styling-practice/issues/3). Nexter project ([3e53cb7](https://github.com/NicolasOmar/styling-practice/commit/3e53cb757683f410b0778410768dca1721862669))
+
+
+### BREAKING CHANGES
+
+* New and last exercise added.
+
 # [2.0.0](https://github.com/NicolasOmar/styling-practice/compare/v1.0.0...v2.0.0) (2024-04-01)
 
 
