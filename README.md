@@ -11,7 +11,7 @@ Repository created to record my practice learning CSS and SASS with exercises ba
 
 ## Status
 - Current repo's version is ![Styling practice version](https://img.shields.io/github/package-json/v/nicolasomar/styling-practice?color=success&label=%20&style=flat-square)
-- **This course has been completed on 10/04/2024 - [Certificate](https://www.udemy.com/certificate/UC-2f0fc277-7862-47ca-a93c-6cc0402c74d7//)**
+- **This course has been completed on 10/04/2024 - [Certificate](https://www.udemy.com/certificate/UC-2f0fc277-7862-47ca-a93c-6cc0402c74d7/)**
 
 ### Why it has not any updated dependencies?
 After finishing its related Udemy course, I archive this repository and unarchive it when I start a new training and add a link in the [`Other practice repos`](#other-practice-repos) section referring to its new repo. But I don't update any associated dependency due to technology changes during the years between each practice, and the produced code which works with the mentioned [`requirements`](#requirements).
