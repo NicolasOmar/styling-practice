@@ -10,7 +10,10 @@
     "media-feature-range-notation": "prefix",
     "value-keyword-case": [
       "lower",
-      { "ignoreProperties": ["fill", "border-bottom"] }
+      {
+        "ignoreProperties": ["fill", "border-bottom"],
+        "ignoreKeywords": ["currentColor"]
+      }
     ]
   }
 }

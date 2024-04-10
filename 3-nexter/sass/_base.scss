@@ -1,0 +1,94 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-secondary: #101d2c;
+$color-black: #000;
+$color-white: #fff;
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  /*
+    - Each argument in [grid-template-rows] (also applicable to other properties) is separated by spaces)
+    - [min-content] sets element's specific size (on width or heigth) on its own content, its default value is {auto}
+    - In case you have a repetitive value, you can use repeat([number_of_time], [setter_value])
+  */
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  /*
+    - {fr} represetnts a fractional unit, which equals to remainig screen size (in width or height) space (1 is the total, 2 is double, 0.5 is half and so on)
+    - On this case, you are repeating the columns on 8, each one of them will have a width of 1 fractional unit (in width) but a fraction of 8.
+  */
+  /* grid-template-columns: repeat(8, 1fr); */
+  /*
+    - [minmax] is a function where you set element's minimun and maximun size (reduces certain logic for grid column's size)
+    - [grid-template-columns] tracks width are also separated by spaces
+      - first column will have 8rem (equals 80px)
+      - second one will use 1 fractional unit (of the remainig space not fill by other columns
+      - from the third to the tenth, those will have a minimun of its content and a maximun of 14rem (equals 140px)
+      - and last one will use the other 1 fractional unit (of the remainig space not fill by other columns
+  */
+  /*
+    - A thing to have in mind in this sintaxis is that grid columns (as well as its rows) can have names with the following sintaxis
+      [column_start_name] {column_size_value} [column_end_name]
+    - Doing this assignation helps to code maintment
+    - You can see its implementation on secion's [grid-column] values
+    - On cases like the {8rem} and {minmax(6rem, 1fr)}, the sintaxis is pretty clear, but for the repeat part, you are setting on each generated column a name set which will be used (assign the section to certan column start or end) by adding column's number after the name (for example, col-start 6 / col-end 7)
+  */
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start]
+    minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end]
+    minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(6rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    /* Using implicit grids will set row values to min-content as default */
+    grid-template-rows: 6rem calc(100vh - 6rem);
+  }
+}

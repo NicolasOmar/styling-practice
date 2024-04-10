@@ -1,0 +1,58 @@
+.features {
+  margin: 15rem 0;
+  /*
+    [grid-column] value is setted like this
+      grid-column: [in_which_column_part_will_start] / [in_which_column_part_will_end]
+    Doing it like this makes code more readable to new users (having the name asignations at hand)
+  */
+  grid-column: center-start / center-end;
+  /* Yes, you can have a grid inside another grid */
+  display: grid;
+  /*
+    - One of first lessons to create a responsive-ready layout is understanding about {auto-fit}
+    - {auto-fit} is a property used to create as many tracks based on screen's width
+    - On the line below, you are saying "Create as many columns as those fit on screen's width, each one should have a minimun of 250 px and a maximun of 1 fractional unit (equals rest of screen's width based on quantity of elements)"
+  */
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  /* You can set a gap between columns and/or rows with property [gap] */
+  gap: 6rem;
+  align-items: start;
+  /*
+    - In this case, you will not set any grid rows configuration because column's config adjust container's content automatically.
+    - However, you can set the rows like the following example, but it is no necessary because it has been already configurated on a implicit grid (no explicit css statements needed)
+  */
+  /* grid-template-rows: auto auto; */
+}
+
+.feature {
+  float: left;
+  width: 33.3333%;
+  margin-bottom: 6rem;
+
+  /* @supports works to reset certain styles added to solve styling on some browsers with limited or not support for that property */
+  @supports (display: grid) {
+    width: 0;
+    margin-bottom: 0;
+  }
+
+  /* Yes, you can multiple layers of grids */
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1.5rem 2.5rem;
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    /*
+      - On this case, you are using span value (using span {span_length}) to expand row's size to 2 places.
+      - But in case you want to extend it to explicit grid's end, you can use -1 aswell.
+    */
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem);
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+}

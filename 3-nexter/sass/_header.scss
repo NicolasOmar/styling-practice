@@ -1,0 +1,72 @@
+.header {
+  background-color: $color-grey-dark-1;
+  /*
+    [grid-column] value is setted like this
+      grid-column: [in_which_column_part_will_start] / [in_which_column_part_will_end]
+    Doing it like this makes code more readable to new users (having the name asignations at hand)
+    - On this particular case, you can see that the header will be starting at sidebar-end and to the end of the sixth column (which has been created in the repeat code). This is the way repeated columns can be called in the grid layout
+  */
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.93),
+      rgba($color-secondary, 0.93)
+    ),
+    url('../img/hero.jpeg');
+  padding: 8rem;
+  padding-top: 4rem;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  justify-content: center;
+  row-gap: 1.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
+
+  &__logo {
+    height: 3rem;
+    justify-self: center;
+  }
+
+  &__btn {
+    place-self: start;
+    justify-self: start;
+  }
+
+  &__seenon-text {
+    display: grid;
+    font-size: 1.5rem;
+    color: $color-grey-light-2;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      display: block;
+      background-color: currentColor;
+    }
+  }
+
+  &__seeon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    place-items: center center;
+
+    img {
+      max-height: 2.5rem;
+      max-width: 100%;
+      filter: brightness(70%);
+    }
+  }
+}

@@ -138,3 +138,8 @@ Flexbox
     items, the elements
     container, the box around ints elements
     
+Grid Layout
+  two-dimensional system in CSS
+  removes float layouts
+  can work next to flexbox
+  display: grid/grid-inline

@@ -1,0 +1,89 @@
+.homes {
+  /*
+    [grid-column] value is setted like this
+      grid-column: [in_which_column_part_will_start] / [in_which_column_part_will_end]
+    Doing it like this makes code more readable to new users (having the name asignations at hand)
+  */
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 7rem;
+}
+
+.home {
+  background-color: $color-grey-light-1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem;
+
+  &__image {
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    z-index: 1;
+  }
+  /*
+    - The image will be put in the first row and occupy the whole columns
+    - The like icon (a svg) will be put on the same row as the image, but will occupy the space between the second and third column, aswell as its z-index will be bigger than image's
+    - In that way, you can see how different elements can be superpose using grid layouts
+  */
+  &__like {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    fill: $color-primary;
+    height: 2.5rem;
+    width: 2.5rem;
+    z-index: 2;
+    justify-self: end;
+    margin: 1rem;
+  }
+
+  &__name {
+    /*
+      - For this case, the name text (an h5), will occupy the same row as image's and its svg, but with the difference of having a bigger z-index
+      - To set element's height to its particular size, you should use a specific aligment (if not, it will strech itself as part of its default behaviour)
+      - At last, to move the element from row's bottom to in between both rows, you transform the element by moving its Y axis a 50%
+    */
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    place-self: flex-end;
+    justify-self: center;
+    z-index: 2;
+    padding: 1.25rem;
+    width: 80%;
+    font-family: $font-display;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: $color-secondary;
+    color: $color-white;
+    font-weight: 400;
+    transform: translateY(50%);
+  }
+
+  &__location,
+  &__rooms {
+    margin-top: 2.5rem;
+  }
+
+  &__location,
+  &__rooms,
+  &__area,
+  &__price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      fill: $color-primary;
+      height: 2rem;
+      width: 2rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / -1;
+  }
+}

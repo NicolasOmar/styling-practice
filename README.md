@@ -11,13 +11,10 @@ Repository created to record my practice learning CSS and SASS with exercises ba
 
 ## Status
 - Current repo's version is ![Styling practice version](https://img.shields.io/github/package-json/v/nicolasomar/styling-practice?color=success&label=%20&style=flat-square)
+- **This course has been completed on 10/04/2024 - [Certificate](https://www.udemy.com/certificate/UC-2f0fc277-7862-47ca-a93c-6cc0402c74d7//)**
 
-### What does that version number mean?
-| Number | Meaning |
-| ------ | ------ |
-| `X.0.0` | How many exercises I have completed |
-| `0.X.0` | How many times I made progress on my next exercise |
-| `0.0.X` | Dependencies version updates and specific patches while the course is not completed |
+### Why it has not any updated dependencies?
+After finishing its related Udemy course, I archive this repository and unarchive it when I start a new training and add a link in the [`Other practice repos`](#other-practice-repos) section referring to its new repo. But I don't update any associated dependency due to technology changes during the years between each practice, and the produced code which works with the mentioned [`requirements`](#requirements).
 
 ## Requirements
 - [Node](https://nodejs.org/en/download/) `v20.10.0` or above
@@ -37,6 +34,7 @@ npm run setup:all
 | ------ | ------ |
 | All | `npm run setup:all` |
 | Natorus | `npm run setup:natorus` |
+| Nexter | `npm run setup:nexter` |
 
 ## How to run it
 - Open the `index.html` file on any of the exercise's indexes.
@@ -84,11 +82,25 @@ npm run setup:all
   - How to work with responsive images using properties like `srcset` and `sizes`.
 - Trillo project (`2-trillo` folder)
   - How to add and use `custom css properties`.
-  - How to use `flex` to adjust layout elements width.
+  - How to use `flex` to adjust layout elements width with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
   - How to use flex starter properties like `justify-` and `align-`.
   - How to adjust element orientation with `flex-direction`.
   - How to add a `svg` element in html and in css.
   - How to use [HTML entities](https://css-tricks.com/snippets/html/glyphs/) in both HTML and CSS implementations.
+- Nexter project (`3-nexter` folder)
+  - How to use `grid` to adjust layout elements with [gird layouts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
+  - How to use adjust grid's structure using `grid-template-rows` and `grid-template-columns`.
+  - How to reduce repetitive values with `repeat`.
+  - How to adjust element's content space with `fr`, `vh`, `vw` and `min-content`.
+  - How to make grid layout easier by including area names on columns.
+  - Handle multiple-level grids (one inside another).
+  - How to set gaps between columns and/or rows using `column-gap` and `row-gap`.
+  - How to make a layout responsive ready without using media queries.
+  - How to use flexbox and grid at the same time (for one-dimensional layouts).
+  - How to supperpose different elements located in the same row or column.
+  - How to create a gallery effect by setting `object-fit` to its images.
+  - How to align several elements in vertical way (besides the already worked horizontal cases).
+  - How to include support for older browsers using `@support`.
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).

@@ -1,0 +1,14 @@
+{
+  "name": "3-nexter",
+  "version": "1.0.0",
+  "description": "Landing page for nexter",
+  "private": false,
+  "scripts": {
+    "start": "npm run compile && npm run watch",
+    "compile": "node-sass sass/main.scss css/style.css --output-style=compressed",
+    "watch": "npm run compile -- -w"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
