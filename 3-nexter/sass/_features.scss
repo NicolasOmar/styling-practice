@@ -1,11 +1,11 @@
 .features {
+  margin: 15rem 0;
   /*
     [grid-column] value is setted like this
       grid-column: [in_which_column_part_will_start] / [in_which_column_part_will_end]
     Doing it like this makes code more readable to new users (having the name asignations at hand)
   */
   grid-column: center-start / center-end;
-  margin: 15rem 0;
   /* Yes, you can have a grid inside another grid */
   display: grid;
   /*
@@ -25,6 +25,16 @@
 }
 
 .feature {
+  float: left;
+  width: 33.3333%;
+  margin-bottom: 6rem;
+
+  /* @supports works to reset certain styles added to solve styling on some browsers with limited or not support for that property */
+  @supports (display: grid) {
+    width: 0;
+    margin-bottom: 0;
+  }
+
   /* Yes, you can multiple layers of grids */
   display: grid;
   grid-template-columns: min-content 1fr;

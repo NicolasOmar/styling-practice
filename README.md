@@ -11,13 +11,10 @@ Repository created to record my practice learning CSS and SASS with exercises ba
 
 ## Status
 - Current repo's version is ![Styling practice version](https://img.shields.io/github/package-json/v/nicolasomar/styling-practice?color=success&label=%20&style=flat-square)
+- **This course has been completed on 10/04/2024 - [Certificate](https://www.udemy.com/certificate/UC-2f0fc277-7862-47ca-a93c-6cc0402c74d7//)**
 
-### What does that version number mean?
-| Number | Meaning |
-| ------ | ------ |
-| `X.0.0` | How many exercises I have completed |
-| `0.X.0` | How many times I made progress on my next exercise |
-| `0.0.X` | Dependencies version updates and specific patches while the course is not completed |
+### Why it has not any updated dependencies?
+After finishing its related Udemy course, I archive this repository and unarchive it when I start a new training and add a link in the [`Other practice repos`](#other-practice-repos) section referring to its new repo. But I don't update any associated dependency due to technology changes during the years between each practice, and the produced code which works with the mentioned [`requirements`](#requirements).
 
 ## Requirements
 - [Node](https://nodejs.org/en/download/) `v20.10.0` or above
@@ -37,6 +34,7 @@ npm run setup:all
 | ------ | ------ |
 | All | `npm run setup:all` |
 | Natorus | `npm run setup:natorus` |
+| Nexter | `npm run setup:nexter` |
 
 ## How to run it
 - Open the `index.html` file on any of the exercise's indexes.
@@ -102,6 +100,7 @@ npm run setup:all
   - How to supperpose different elements located in the same row or column.
   - How to create a gallery effect by setting `object-fit` to its images.
   - How to align several elements in vertical way (besides the already worked horizontal cases).
+  - How to include support for older browsers using `@support`.
 - Bonus
   - Inclusion of libraries for code formatting and linting ([prettier](https://github.com/prettier/prettier) and [stylelint](https://github.com/stylelint/stylelint)).
   - Inclusion of libraries for code review based on git-hooks ([lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky)).
